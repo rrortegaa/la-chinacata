@@ -1,29 +1,8 @@
 ---
-import clsx from "clsx";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../sections/home/Hero.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body class={clsx("bg-slate-500")}>
-    <div class="bg-pink-400 flex flex-col max-w-7xl mx-auto px-8 w-full">
-      <div class="border border-green-600 mx-auto">
-        <h1 class="text-sky-700">Astro</h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi enim
-          in, iusto, dignissimos culpa ipsam nesciunt expedita dolor officiis
-          deleniti alias, molestiae blanditiis repellat voluptatibus. Temporibus
-          aliquid illum illo ad! Quidem sed sint deserunt hic consectetur nam,
-          alias quod? Blanditiis error quos possimus beatae consequatur iste
-          rerum eveniet sunt ut reprehenderit, explicabo fuga earum nihil
-          aliquid repellendus, quidem dignissimos cum?
-        </p>
-      </div>
-    </div>
-  </body>
-</html>
+<Layout>
+  <Hero />
+</Layout>

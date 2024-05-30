@@ -1,0 +1,54 @@
+---
+import "@fontsource/kurale";
+import "@fontsource-variable/outfit"; // Supports weights 100-900
+
+interface Props {
+  class?: string;
+  title: string;
+}
+
+const { class: className, title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Authentic and traditional homemade catering, made with fresh ingredients and family recipes. Enjoy the culinary experience at your event in California."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Authentic homemade flavor | La Chinacata | Catering in CA</title>
+    <!-- <title>{title}</title> -->
+    <!-- <title>La Chinacata, homemade flavor for unforgettable celebrations</title> -->
+  </head>
+  <body class:list="bg-neutral-50 text-[#666]">
+    <main
+      class:list={[
+        // "bg-pink-400",
+        "flex flex-col",
+        "gap-10 md:gap-20",
+        "mt-24 md:mt-28 lg:mt-20",
+        className,
+      ]}
+    >
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  .section {
+    padding: 0 1rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .section-full {
+    margin: 0 auto;
+    width: 100%;
+  }
+</style>
