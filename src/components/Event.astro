@@ -1,0 +1,46 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  class?: string;
+  name: string;
+  detail: string;
+  moreDetails?: string;
+  image: ImageMetadata;
+  alt: string;
+}
+
+const { class: className, name, detail, moreDetails, image, alt } = Astro.props;
+---
+
+<Image
+  src={image}
+  alt={alt}
+  class:list={[
+    "border-green-leaf border-y-2 border-l-2 border-r-4",
+    "object-cover rounded-full",
+    "max-w-[80%] place-self-center",
+    className,
+  ]}
+/>
+
+<span class:list={[]}>
+  {name}
+</span>
+<p
+  class:list={[
+    "bg-shark",
+    "font-sans font-light text-green-leaf text-lg text-center text-pretty",
+  ]}
+>
+  {detail}
+</p>
+<p
+  class:list={[
+    "bg-shark",
+    "font-sans font-light text-green-leaf text-lg text-center text-pretty",
+  ]}
+>
+  {moreDetails}
+</p>

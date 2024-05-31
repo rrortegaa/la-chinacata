@@ -1,0 +1,196 @@
+---
+import Event from "../../components/Event.astro";
+import eventImage from "../../assets/unnamed49copy.jpeg";
+
+const events = [
+  {
+    name: "Wedding",
+    detail:
+      "In our bespoke catering service we blend the warmth of homemade flavors with the elegance of custom-designed menus to create unforgettable culinary experiences.",
+    moreDetails:
+      "At La Chinacata, we understand that your wedding day is one of the most significant moments in your life, and we are dedicated to making it truly special.",
+    image: eventImage,
+    alt: "primera imagen",
+  },
+  {
+    name: "Social",
+    detail:
+      "In our bespoke catering service we blend the warmth of homemade flavors with the elegance of custom-designed menus to create unforgettable culinary experiences.",
+    moreDetails:
+      "At La Chinacata, we understand that your wedding day is one of the most significant moments in your life, and we are dedicated to making it truly special.",
+    image: eventImage,
+    alt: "segunda imagen",
+  },
+  {
+    name: "Corporate",
+    detail:
+      "In our bespoke catering service we blend the warmth of homemade flavors with the elegance of custom-designed menus to create unforgettable culinary experiences.",
+    moreDetails:
+      "At La Chinacata, we understand that your wedding day is one of the most significant moments in your life, and we are dedicated to making it truly special.",
+    image: eventImage,
+    alt: "tercera imagen",
+  },
+];
+---
+
+<section
+  class:list={[
+    "section",
+    "bg-lavender-blush",
+    "grid grid-cols-1 md:grid-cols-2 md:gap-5 lg:gap-7",
+  ]}
+>
+  <h2
+    class:list={[
+      "font-serif",
+      "mt-14 mb-12",
+      "text-french-rose text-heading-sm lg:text-heading-lg text-center",
+    ]}
+  >
+    Celebrating <br /> life's moments
+  </h2>
+  {
+    events.map((event) => (
+      <Event
+        image={event.image}
+        alt={event.alt}
+        name={event.name}
+        detail={event.detail}
+        moreDetails={event.moreDetails}
+      />
+    ))
+  }
+
+  <!-- <Image
+    src={eventImage}
+    alt=""
+    class:list={[
+      "border-green-leaf border-y-2 border-l-2 border-r-4",
+      "md:col-start-1",
+      "object-cover rounded-full",
+      "max-w-[90%] place-self-center",
+    ]}
+  /> -->
+
+  <!-- <span class:list={["md:hidden"]}>Weddings</span>
+    <p
+      class:list={[
+        "bg-shark",
+        "md:hidden",
+        "md:absolute",
+        "md:-z-10",
+        "font-sans font-light text-green-leaf text-lg text-center text-pretty",
+      ]}
+    >
+      In our bespoke catering service we blend the warmth of homemade flavors
+      with the elegance of custom-designed menus to create unforgettable
+      culinary experiences. <br />
+      <br /> At La Chinacata, we understand that your wedding day is one of the most
+      significant moments in your life, and we are dedicated to making it truly special.
+    </p>
+
+    <span class:list={["md:hidden"]}>Social</span>
+    <p
+      class:list={[
+        "bg-vista-white",
+        "md:hidden",
+        "md:absolute,",
+        "md:-z-20",
+        "font-sans font-light text-green-leaf text-lg text-center text-pretty",
+      ]}
+    >
+      In our bespoke catering service we blend the warmth of homemade flavors
+      with the elegance of custom-designed menus to create unforgettable
+      culinary experiences. <br />
+      <br /> At La Chinacata, we understand that your wedding day is one of the most
+      significant moments in your life, and we are dedicated to making it truly special.
+    </p> -->
+
+  <!-- Desktop events -->
+
+  <!-- <div
+      class:list={[
+        "hidden md:flex",
+        "border border-carnation",
+        "justify-between",
+        "mt-9 mx-auto",
+        "w-10/12",
+      ]}
+    >
+      <span
+        class:list={["cursor-pointer", "font-sans", "text-green-leaf text-lg"]}
+      >
+        Weddings
+      </span>
+      <span
+        class:list={["cursor-pointer", "font-sans", "text-green-leaf text-lg"]}
+      >
+        Social
+      </span>
+      <span
+        class:list={["cursor-pointer", "font-sans", "text-green-leaf text-lg"]}
+      >
+        Corporate
+      </span>
+    </div>
+    <div class:list={["bg-carnation", "md:relative", "mt-6"]}>
+      <p
+        class:list={[
+          "bg-pink-400",
+          "md:absolute",
+          "font-sans font-light text-green-leaf text-lg text-center text-pretty",
+        ]}
+      >
+        In our bespoke catering service we blend the warmth of homemade flavors
+        with the elegance of custom-designed menus to create unforgettable
+        culinary experiences. <br />
+        <br /> At La Chinacata, we understand that your wedding day is one of the
+        most significant moments in your life, and we are dedicated to making it
+        truly special.
+      </p>
+      <p
+        class:list={[
+          "bg-shark",
+          "hidden md:block",
+          "md:absolute",
+          "md:-z-10",
+          "font-sans font-light text-green-leaf text-lg text-center text-pretty",
+        ]}
+      >
+        In our bespoke catering service we blend the warmth of homemade flavors
+        with the elegance of custom-designed menus to create unforgettable
+        culinary experiences. <br />
+        <br /> At La Chinacata, we understand that your wedding day is one of the
+        most significant moments in your life, and we are dedicated to making it
+        truly special.
+      </p>
+      <p
+        class:list={[
+          "bg-vista-white",
+          "hidden md:block",
+          "md:absolute,",
+          "md:-z-20",
+          "font-sans font-light text-green-leaf text-lg text-center text-pretty",
+        ]}
+      >
+        In our bespoke catering service we blend the warmth of homemade flavors
+        with the elegance of custom-designed menus to create unforgettable
+        culinary experiences. <br />
+        <br /> At La Chinacata, we understand that your wedding day is one of the
+        most significant moments in your life, and we are dedicated to making it
+        truly special.
+      </p>
+    </div>
+    <div
+      class:list={[
+        "bg-carnation rounded-full",
+        "font-sans font-semibold",
+        "max-w-32",
+        "mt-8",
+        "p-4",
+        "text-vista-white text-base",
+      ]}
+    >
+      Get in touch
+    </div> -->
+</section>
