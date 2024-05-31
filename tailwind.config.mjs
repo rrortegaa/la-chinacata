@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require("tailwindcss/defaultTheme");
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -18,6 +18,33 @@ module.exports = {
         serif: ['Kurale', ...defaultTheme.fontFamily.serif],
         sans: ['Outfit', ...defaultTheme.fontFamily.sans],
       },
+      fontSize: {
+        'hero-sm': ['3.75rem', {
+          lineHeight: '1.2',
+          letterSpacing: '-0.01em',
+          fontWeight: '400'
+        }],
+        'hero-md': ['4.5rem', {
+          lineHeight: '1.2',
+          letterSpacing: '-0.01em',
+          fontWeight: '400'
+        }],
+        'hero-lg': ['6rem', {
+          lineHeight: '1.2',
+          letterSpacing: '-0.01em',
+          fontWeight: '400'
+        }],
+        'heading-sm': ['3.25rem', {
+          lineHeight: '1.2',
+          letterSpacing: '-0.02em',
+          fontWeight: '400'
+        }],
+        'heading-lg': ['5.125rem', {
+          lineHeight: '1.2',
+          letterSpacing: '-0.02em',
+          fontWeight: '400'
+        }],
+      }
     },
 	},
 	plugins: [],
