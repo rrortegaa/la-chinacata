@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/logo-footer.svg";
+---
+
+<footer class:list={["section-full", "py-20"]}>
+  <div
+    class:list={[
+      "flex justify-center md:justify-start",
+      "mx-auto",
+      "max-w-screen-xl",
+      "w-4/5",
+    ]}
+  >
+    <Image src={logo} alt="la chinacata logo" class:list={["w-36", "pb-14"]} />
+  </div>
+
+  <div
+    class:list={[
+      "border-t border-t-green-leaf",
+      "flex flex-col md:flex-row",
+      "items-center justify-center md:justify-between",
+      "font-light text-sm text-green-leaf",
+      "mx-auto",
+      "max-w-screen-xl",
+      "w-4/5",
+    ]}
+  >
+    <p class="pt-7">La Chinacata© 2024 All rights reserved</p>
+    <a class="cursor-pointer pt-2 md:pt-7" href="#">Privacy policy</a>
+  </div>
+</footer>
