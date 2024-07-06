@@ -1,6 +1,8 @@
 ---
 import "@fontsource/kurale";
 import "@fontsource-variable/outfit"; // Supports weights 100-900
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   class?: string;
@@ -21,11 +23,13 @@ const { class: className, title } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Authentic homemade flavor | La Chinacata | Catering in CA</title>
+    <title>{title}</title>
+    <!-- <title>Authentic homemade flavor | La Chinacata | Catering in CA</title> -->
     <!-- <title>{title}</title> -->
     <!-- <title>La Chinacata, homemade flavor for unforgettable celebrations</title> -->
   </head>
   <body class:list="bg-neutral-50 text-[#666]">
+    <Navbar />
     <main
       class:list={[
         // "bg-pink-400",
@@ -37,6 +41,7 @@ const { class: className, title } = Astro.props;
     >
       <slot />
     </main>
+    <Footer />
   </body>
 </html>
 
