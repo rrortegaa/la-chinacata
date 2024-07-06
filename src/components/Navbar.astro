@@ -1,0 +1,99 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/logo.svg";
+
+const links = [
+  { name: "About", href: "/about" },
+  { name: "Events", href: "/events" },
+  { name: "Services", href: "/services" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Reviews", href: "/reviews" },
+  { name: "Follow us", href: "/follow-us" },
+];
+---
+
+<nav class:list={["section-full"]}>
+  <main
+    class:list={[
+      "border border-french-rose",
+      "section",
+      "flex flex-row justify-between lg:items-center",
+      "gap-x-20",
+      "text-base lg:text-20px",
+    ]}
+  >
+    <a href="/" class="col-span-1 flex items-center">
+      <Image src={logo} alt="Simplifica logo" class="w-full" />
+    </a>
+
+    <div class:list={["flex lg:hidden cursor-pointer place-items-center"]}>
+      <!-- <Image
+        id="openmenu"
+        src={bars}
+        alt="abrir menú"
+        class="w-6 h-6 text-mine-shaft"
+      />
+      <Image
+        id="closemenu"
+        src={close}
+        alt="cerrar menú"
+        class="w-6 h-6 text-mine-shaft hidden"
+      /> -->
+    </div>
+
+    <section
+      id="menu"
+      class:list={[
+        "bg-gradient-to-b from-neutral-50 to-neutral-50/95",
+        "border border-carnation",
+        "absolute lg:relative",
+        "top-[78px] lg:top-0 left-0",
+        "hidden lg:flex",
+        "justify-around",
+        "items-center",
+        "py-4 px-12 lg:p-0",
+        "transition duration-75 ease",
+        "w-full",
+      ]}
+    >
+      <div
+        class:list={[
+          "flex",
+          "flex-col lg:flex-row",
+          "justify-between",
+          "w-full",
+        ]}
+      >
+        {
+          links.map(({ name, href }) => (
+            <a
+              href={href}
+              class:list={[
+                "border-b border-zircon lg:border-0",
+                "py-8 lg:py-0",
+                "text-20px text-mine-shaft",
+                "hover:text-aqua-brand",
+                "hover:transition-all hover:duration-150",
+                "focus:text-aqua-brand",
+              ]}
+            >
+              {name}
+            </a>
+          ))
+        }
+        <a
+          href="/"
+          class:list={[
+            "lg:hidden",
+            "py-9",
+            "inline-flex justify-center items-center gap-x-5",
+            "text-base text-mine-shaft",
+          ]}
+        >
+          <!-- <Image src={icon} alt="menú" class="" /> -->
+          Go to homepage
+        </a>
+      </div>
+    </section>
+  </main>
+</nav>
