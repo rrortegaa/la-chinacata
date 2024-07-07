@@ -41,7 +41,17 @@ module.exports = {
         'green-leaf-800': '#417100',
         'green-leaf-900': '#386106',
         'green-leaf-950': '#1B3700',
-        'shark': '#262626',
+        'shark-50': '#F6F6F6',
+        'shark-100': '#E7E7E7',
+        'shark-200': '#D1D1D1',
+        'shark-300': '#B0B0B0',
+        'shark-400': '#888888',
+        'shark-500': '#6D6D6D',
+        'shark-600': '#5D5D5D',
+        'shark-700': '#4F4F4F',
+        'shark-800': '#454545',
+        'shark-900': '#3D3D3D',
+        'shark-950': '#262626',
 
       },
       fontFamily: {
