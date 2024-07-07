@@ -4,7 +4,7 @@ import eventImage from "../../assets/unnamed49copy.jpeg";
 
 const events = [
   {
-    name: "Wedding",
+    name: "Weddings",
     detail:
       "In our bespoke catering service we blend the warmth of homemade flavors with the elegance of custom-designed menus to create unforgettable culinary experiences.",
     moreDetails:
@@ -33,33 +33,36 @@ const events = [
 ];
 ---
 
-<section
-  class:list={[
-    "section",
-    "bg-lavender-blush",
-    "grid grid-cols-1 md:grid-cols-2 md:gap-5 lg:gap-7",
-  ]}
->
-  <h2
+<section class:list={["section-full", "bg-shark-50", "py-16"]}>
+  <div
     class:list={[
-      "font-serif",
-      "mt-14 mb-12",
-      "text-french-rose text-heading-sm lg:text-heading-lg text-center",
+      "border border-dashed border-lime-400",
+      "section",
+      "grid grid-cols-1 md:grid-cols-2 md:gap-5 lg:gap-7",
     ]}
   >
-    Celebrating <br /> life's moments
-  </h2>
-  {
-    events.map((event) => (
-      <Event
-        image={event.image}
-        alt={event.alt}
-        name={event.name}
-        detail={event.detail}
-        moreDetails={event.moreDetails}
-      />
-    ))
-  }
+    <h2
+      class:list={[
+        "md:hidden",
+        "pb-6",
+        "font-serif text-heading-sm lg:text-heading-lg text-center text-carnation-400 ",
+      ]}
+    >
+      Celebrating <br /> life's moments
+    </h2>
+    {
+      events.map((event) => (
+        <Event
+          image={event.image}
+          alt={event.alt}
+          name={event.name}
+          detail={event.detail}
+          moreDetails={event.moreDetails}
+          class=" first-of-type:pt-8 pt-12"
+        />
+      ))
+    }
+  </div>
 
   <!-- <Image
     src={eventImage}
