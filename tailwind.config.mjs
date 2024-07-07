@@ -6,11 +6,41 @@ module.exports = {
 	theme: {
 		extend: {
       colors: {
-        'french-rose': '#F35E8C',
+        'french-rose-50': '#FEF2F5',
+        'french-rose-100': '#FEE5EB',
+        'french-rose-200': '#FCCFDC',
+        'french-rose-300': '#F9A8BF',
+        'french-rose-400': '#F35E8C',
+        'french-rose-500': '#EC477E',
+        'french-rose-600': '#D8266A',
+        'french-rose-700': '#B61A5A',
+        'french-rose-800': '#991851',
+        'french-rose-900': '#83184B',
+        'french-rose-950': '#490825',
         'lavender-blush': '#FEF2F5',
         'vista-white': '#FFFBFB',
-        'carnation': '#FF5865',
-        'green-leaf': '#417100',
+        'carnation-50': '#FFF1F2',
+        'carnation-100': '#FFE1E3',
+        'carnation-200': '#FFC7CB',
+        'carnation-300': '#FFA0A7',
+        'carnation-400': '#FF5865',
+        'carnation-500': '#F83B4A',
+        'carnation-600': '#E51D2D',
+        'carnation-700': '#C11421',
+        'carnation-800': '#A0141F',
+        'carnation-900': '#841820',
+        'carnation-950': '#48070C',
+        'green-leaf-50': '#F9FFE2',
+        'green-leaf-100': '#F1FFC0',
+        'green-leaf-200': '#E1FF88',
+        'green-leaf-300': '#C9FF44',
+        'green-leaf-400': '#B0FF0D',
+        'green-leaf-500': '#90F500',
+        'green-leaf-600': '#6EC500',
+        'green-leaf-700': '#529500',
+        'green-leaf-800': '#417100',
+        'green-leaf-900': '#386106',
+        'green-leaf-950': '#1B3700',
         'shark': '#262626',
 
       },
@@ -19,6 +49,11 @@ module.exports = {
         sans: ['Outfit', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
+        'heading-sm': ['3.25rem', {
+          lineHeight: '1.2',
+          letterSpacing: '-0.02em',
+          fontWeight: '400'
+        }],
         'hero-sm': ['3.75rem', {
           lineHeight: '1.2',
           letterSpacing: '-0.01em',
@@ -29,19 +64,14 @@ module.exports = {
           letterSpacing: '-0.01em',
           fontWeight: '400'
         }],
-        'hero-lg': ['6rem', {
-          lineHeight: '1.2',
-          letterSpacing: '-0.01em',
-          fontWeight: '400'
-        }],
-        'heading-sm': ['3.25rem', {
-          lineHeight: '1.2',
-          letterSpacing: '-0.02em',
-          fontWeight: '400'
-        }],
         'heading-lg': ['5.125rem', {
           lineHeight: '1.2',
           letterSpacing: '-0.02em',
+          fontWeight: '400'
+        }],
+        'hero-lg': ['6rem', {
+          lineHeight: '1.2',
+          letterSpacing: '-0.01em',
           fontWeight: '400'
         }],
       }
