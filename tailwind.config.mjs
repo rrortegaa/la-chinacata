@@ -6,7 +6,7 @@ module.exports = {
 	theme: {
 		extend: {
       backgroundImage: {
-        'home-hero': 'url("/src/assets/appetizers-copy.jpeg")',
+        'home-hero': 'url("/src/assets/appetizers.jpeg")',
       },
       colors: {
         'french-rose-50': '#FEF2F5',
