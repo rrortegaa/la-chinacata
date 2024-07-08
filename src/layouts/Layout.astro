@@ -24,19 +24,11 @@ const { class: className, title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <!-- <title>Authentic homemade flavor | La Chinacata | Catering in CA</title> -->
-    <!-- <title>{title}</title> -->
-    <!-- <title>La Chinacata, homemade flavor for unforgettable celebrations</title> -->
   </head>
   <body class:list="bg-neutral-50 text-[#666]">
     <Navbar />
     <main
-      class:list={[
-        "flex flex-col",
-        "gap-10 md:gap-20",
-        "mt-24 md:mt-28 lg:mt-20",
-        className,
-      ]}
+      class:list={["flex flex-col", "gap-10 md:gap-20", "mt-24", className]}
     >
       <slot />
     </main>

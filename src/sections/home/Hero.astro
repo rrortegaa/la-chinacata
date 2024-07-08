@@ -1,27 +1,28 @@
----
-
----
-
-<section class="section-full hero">
-  <h1
+<section
+  class:list={[
+    "section-full",
+    "bg-home-hero bg-no-repeat bg-center bg-cover",
+    "h-[calc(100vh-6rem)]",
+  ]}
+>
+  <div
     class:list={[
-      "absolute bottom-40",
-      "font-serif",
-      "max-w-96 lg:max-w-lg",
-      "px-4",
-      "text-hero-sm md:text-hero-md lg:text-hero-lg text-center text-pretty text-vista-white",
+      "section-full",
+      "bg-gradient-to-b from-transparent via-green-leaf-950/20 from-20% to-french-rose-950/25 to-70%",
+      "flex justify-center",
+      "h-full w-full",
     ]}
   >
-    Authentic homemade flavor
-  </h1>
+    <h1
+      class:list={[
+        "absolute bottom-40",
+        "font-serif drop-shadow-lg",
+        "max-w-96 lg:max-w-lg",
+        "px-4",
+        "text-hero-sm md:text-hero-md lg:text-hero-lg text-center text-pretty text-vista-white",
+      ]}
+    >
+      Authentic homemade flavor
+    </h1>
+  </div>
 </section>
-<style>
-  .hero {
-    background:
-      linear-gradient(#e556090d 30%, #2626268c 60%),
-      url("../../assets/appetizers-copy.jpeg") no-repeat center / cover;
-    display: flex;
-    justify-content: center;
-    height: 80vh;
-  }
-</style>
