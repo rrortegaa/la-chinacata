@@ -5,6 +5,9 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+      backgroundImage: {
+        'home-hero': 'url("/src/assets/appetizers-copy.jpeg")',
+      },
       colors: {
         'french-rose-50': '#FEF2F5',
         'french-rose-100': '#FEE5EB',
