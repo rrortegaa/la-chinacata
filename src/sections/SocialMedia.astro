@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import insta from "../assets/instagram.svg";
+import fb from "../assets/facebook.svg";
+import tt from "../assets/tiktok.svg";
+---
+
+<section class:list={["section-full", "bg-french-rose-400", "py-40"]}>
+  <div
+    class:list={[
+      "flex flex-col",
+      "md:flex-row justify-between items-center",
+      "gap-y-14",
+      "mx-auto",
+      "max-w-[1160px]",
+      "px-8",
+      "w-full",
+    ]}
+  >
+    <h2
+      class:list={[
+        "font-serif text-heading-lg text-pretty text-vista-white",
+        "max-w-[30rem]",
+      ]}
+    >
+      Follow us<br />in our<br />social media
+    </h2>
+    <div class="flex justify-between items-center gap-x-6">
+      <a href="#"
+        ><Image
+          src={insta}
+          alt=""
+          class:list={[
+            "cursor-pointer hover:scale-95",
+            "hover:transition-all hover:duration-150 hover:ease-in-out",
+          ]}
+        /></a
+      >
+      <a href="#"
+        ><Image
+          src={tt}
+          alt=""
+          class:list={[
+            "cursor-pointer hover:scale-95",
+            "hover:transition-all hover:duration-150 hover:ease-in-out",
+          ]}
+        /></a
+      >
+      <a href="#"
+        ><Image
+          src={fb}
+          alt=""
+          class:list={[
+            "cursor-pointer hover:scale-95",
+            "hover:transition-all hover:duration-150 hover:ease-in-out",
+          ]}
+        /></a
+      >
+    </div>
+  </div>
+</section>
