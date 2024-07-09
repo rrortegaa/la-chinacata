@@ -70,6 +70,7 @@ const images = [
         images.map((img, i) => (
           <div class:list={[
             "overflow-hidden",
+            "rounded",
             img.position
           ]}>
             <Image
@@ -77,7 +78,7 @@ const images = [
               alt={`Gallery image ${i + 1}`}
               class:list={[
                 "bg-black/10",
-                "object-cover object-center rounded",
+                "object-cover object-center",
                 "w-full h-full",
                 "hover:scale-110 transition-transform duration-300 ease-in-out",
                 img.class
