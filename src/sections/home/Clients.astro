@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+import cheers from "../../assets/clients/cheers.png";
+
+const reviews = [
+  {
+    name: "Luisa & Andrew",
+    review:
+      "I hired La Chinacata for my wedding and I couldn't be happier. The food was delicious and the service was impeccable. I highly recommend them for any event.",
+    image: cheers,
+  },
+];
+---
+
+<section id="reviews" class:list={["section"]}>
+  <header
+    class:list={[
+      "flex flex-col gap-7",
+      "mx-auto",
+      "max-w-2xl",
+      "[&_p]:text-lg",
+      "font-light text-center text-green-leaf-800",
+    ]}
+  >
+    <h2
+      class="font-serif text-heading-sm md:text-heading-lg text-french-rose-400"
+    >
+      Celebrating with homemade flavor & happy clients
+    </h2>
+
+    <p>
+      At La Chinacata we strive to create unforgettable culinary experiences for
+      each event. But don't just take our word for it, listen to what our
+      satisfied customers say!
+    </p>
+  </header>
+  <div class:list={["mx-auto", "max-w-screen-sm", "pt-10"]}>
+    {
+      reviews.map((review) => (
+        <div class:list={["flex flex-col sm:flex-row gap-6"]}>
+          <Image
+            src={review.image}
+            alt={review.name}
+            class:list={["basis-1/2", "rounded-md", "mx-auto"]}
+          />
+          <div
+            class:list={[
+              "flex flex-col basis-1/2",
+              "[&_p]:text-center [&_p]:text-lg",
+              "font-medium text-pretty text-green-leaf-800",
+            ]}
+          >
+            <p>
+              <span class="align-sub font-serif font-bold text-4xl">"</span>
+              {review.review}
+              <span class="align-sub font-serif font-bold text-4xl">"</span>
+            </p>
+            <p class="italic pt-6">{review.name}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
