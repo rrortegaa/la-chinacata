@@ -9,19 +9,6 @@ module.exports = {
         'home-hero': 'url("/src/assets/appetizers.jpeg")',
       },
       colors: {
-        'french-rose-50': '#FEF2F5',
-        'french-rose-100': '#FEE5EB',
-        'french-rose-200': '#FCCFDC',
-        'french-rose-300': '#F9A8BF',
-        'french-rose-400': '#F35E8C',
-        'french-rose-500': '#EC477E',
-        'french-rose-600': '#D8266A',
-        'french-rose-700': '#B61A5A',
-        'french-rose-800': '#991851',
-        'french-rose-900': '#83184B',
-        'french-rose-950': '#490825',
-        'lavender-blush': '#FEF2F5',
-        'vista-white': '#FFFBFB',
         'carnation-50': '#FFF1F2',
         'carnation-100': '#FFE1E3',
         'carnation-200': '#FFC7CB',
@@ -33,6 +20,17 @@ module.exports = {
         'carnation-800': '#A0141F',
         'carnation-900': '#841820',
         'carnation-950': '#48070C',
+        'french-rose-50': '#FEF2F5',
+        'french-rose-100': '#FEE5EB',
+        'french-rose-200': '#FCCFDC',
+        'french-rose-300': '#F9A8BF',
+        'french-rose-400': '#F35E8C', // rose primary
+        'french-rose-500': '#EC477E',
+        'french-rose-600': '#D8266A',
+        'french-rose-700': '#B61A5A',
+        'french-rose-800': '#991851',
+        'french-rose-900': '#83184B',
+        'french-rose-950': '#490825',
         'green-leaf-50': '#F9FFE2',
         'green-leaf-100': '#F1FFC0',
         'green-leaf-200': '#E1FF88',
@@ -41,9 +39,10 @@ module.exports = {
         'green-leaf-500': '#90F500',
         'green-leaf-600': '#6EC500',
         'green-leaf-700': '#529500',
-        'green-leaf-800': '#417100',
+        'green-leaf-800': '#417100', // green primary
         'green-leaf-900': '#386106',
         'green-leaf-950': '#1B3700',
+        'lavender-blush': '#FEF2F5',
         'shark-50': '#F6F6F6',
         'shark-100': '#E7E7E7',
         'shark-200': '#D1D1D1',
@@ -55,37 +54,37 @@ module.exports = {
         'shark-800': '#454545',
         'shark-900': '#3D3D3D',
         'shark-950': '#262626',
-
+        'vista-white': '#FFFBFB', // background
       },
       fontFamily: {
         serif: ['Kurale', ...defaultTheme.fontFamily.serif],
         sans: ['Outfit', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
-        'heading-sm': ['3.25rem', {
+        'hero-sm': ['3.5rem', {
           lineHeight: '1.2',
-          letterSpacing: '-0.02em',
-          fontWeight: '400'
-        }],
-        'hero-sm': ['3.75rem', {
-          lineHeight: '1.2',
-          letterSpacing: '-0.01em',
-          fontWeight: '400'
+          letterSpacing: '-0.005em',
+          fontWeight: '500'
         }],
         'hero-md': ['4.5rem', {
           lineHeight: '1.2',
-          letterSpacing: '-0.01em',
-          fontWeight: '400'
-        }],
-        'heading-lg': ['5.125rem', {
-          lineHeight: '1.2',
-          letterSpacing: '-0.02em',
-          fontWeight: '400'
+          letterSpacing: '-0.005em',
+          fontWeight: '500'
         }],
         'hero-lg': ['6rem', {
           lineHeight: '1.2',
-          letterSpacing: '-0.01em',
-          fontWeight: '400'
+          letterSpacing: '-0.005em',
+          fontWeight: '500'
+        }],
+        'heading-sm': ['2.75rem', {
+          lineHeight: '1.2',
+          letterSpacing: '-0.005em',
+          fontWeight: '500'
+        }],
+        'heading-lg': ['5rem', {
+          lineHeight: '1.2',
+          letterSpacing: '-0.005em',
+          fontWeight: '500'
         }],
       }
     },
