@@ -6,11 +6,11 @@ import close from "../assets/icons/close.svg";
 
 const links = [
   { name: "About", href: "/about" },
-  { name: "Events", href: "/events" },
-  { name: "Services", href: "/services" },
+  { name: "Events", href: "/#events" },
+  { name: "Services", href: "/#services" },
   { name: "Gallery", href: "/gallery" },
-  { name: "Reviews", href: "/reviews" },
-  { name: "Follow us", href: "/follow-us" },
+  { name: "Reviews", href: "/#reviews" },
+  { name: "Follow us", href: "/#follow-us" },
 ];
 ---
 
@@ -21,7 +21,7 @@ const links = [
     "bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-25",
     "fixed top-0",
     "lg:flex",
-    "py-3",
+    "pt-3 lg:py-3",
     "w-full",
     "z-10",
   ]}
@@ -34,16 +34,15 @@ const links = [
     ]}
   >
     <a href="/" class="flex items-center">
-      <Image src={logo} alt="La chinacata logo" class="w-56 lg:w-full" />
+      <Image
+        src={logo}
+        alt="La chinacata logo"
+        class="max-h-14 lg:max-h-none lg:w-full"
+      />
     </a>
 
     <div class:list={["cursor-pointer flex lg:hidden place-items-center"]}>
-      <Image
-        id="openmenu"
-        src={menu}
-        alt="abrir menú"
-        class="w-8 h-8 text-green-leaf-950"
-      />
+      <Image id="openmenu" src={menu} alt="abrir menú" class="w-8 h-8" />
     </div>
 
     <section
@@ -53,7 +52,7 @@ const links = [
         "hidden lg:flex",
         "justify-around",
         "py-4 px-12 lg:p-0",
-        "transition duration-75 ease",
+        "transition duration-75 ease-linear",
         "w-full",
       ]}
     >
@@ -71,7 +70,7 @@ const links = [
             <a
               href={href}
               class:list={[
-                "font-medium tracking-wide text-lg text-green-leaf-800",
+                "font-medium tracking-wide text-lg text-green-leaf-950",
                 "hover:text-french-rose-500",
                 "hover:transition-all hover:duration-150 hover:ease-in-out",
                 "focus:text-french-rose-500",
@@ -84,7 +83,6 @@ const links = [
         <a
           href="/"
           class:list={[
-            "absolute bottom-1 right-0",
             "bg-french-rose-400",
             "inline-flex justify-center items-end",
             "py-0.5 px-4",
@@ -115,23 +113,17 @@ const links = [
 >
   <main
     class:list={[
-      "border border-orange-500",
       "section",
       "flex flex-row justify-between",
       "font-serif text-5xl leading-4",
     ]}
   >
     <a href="/" class="flex items-center">
-      <Image src={logo} alt="La chinacata logo" class="w-56" />
+      <Image src={logo} alt="La chinacata logo" class="max-h-14" />
     </a>
 
     <div class:list={["cursor-pointer flex place-items-center"]}>
-      <Image
-        id="closemenu"
-        src={close}
-        alt="cerrar menú"
-        class="w-8 h-8 text-green-leaf-950"
-      />
+      <Image id="closemenu" src={close} alt="cerrar menú" class="w-8 h-8" />
     </div>
 
     <section
@@ -139,7 +131,7 @@ const links = [
         "absolute",
         "top-[92px] left-0",
         "py-8 px-12",
-        "transition duration-75 ease",
+        "transition duration-75 ease-linear",
         "w-full",
       ]}
     >
