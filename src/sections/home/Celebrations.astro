@@ -1,0 +1,153 @@
+---
+import { Image } from "astro:assets";
+import seafood from "../../assets/seafood-appetizers.jpeg";
+
+const menus = [
+  {
+    name: "Mexican Cuisine",
+    detail:
+      "Enjoy the classic flavors of Mexican cuisine, from delicious moles to typical appetizers.",
+  },
+  {
+    name: "Brunch",
+    detail:
+      "Start your weekend with a delicious traditional brunch or a mexican brunch with waffles, omelets and fresh fruit.",
+  },
+  {
+    name: "",
+    detail: "",
+  },
+  {
+    name: "American Favorites",
+    detail:
+      "Choose from casual dishes like burgers and wings, or elegant dinners with steaks and pastas.",
+  },
+  {
+    name: "Elegant Dinners",
+    detail:
+      "Surprise your guests with a formal multi-course dinner, perfect for anniversaries or business meetings.",
+  },
+  {
+    name: "",
+    detail: "",
+  },
+  {
+    name: "Social events",
+    detail:
+      "Liven up your party with casual food and appetizers that will keep your guests coming back for more.",
+  },
+  {
+    name: "Tropical Paradise",
+    detail:
+      "Transport your guests to a Hawaiian oasis with  teriyaki chicken, and traditional hawaiian mac salad.",
+  },
+  {
+    name: "",
+    detail: "",
+  },
+  {
+    name: "Corporate catering",
+    detail:
+      "Impress your colleagues with office catering that offers healthy and delicious options.",
+  },
+  {
+    name: "Add-ons",
+    detail: "Add-ons appetizers station, snack station and desserts.",
+  },
+];
+---
+
+<section id="services" class:list={["section"]}>
+  <header
+    class:list={[
+      "flex flex-col gap-7",
+      "mx-auto",
+      "max-w-2xl",
+      "pb-10",
+      "text-center",
+      "[&_p]:font-sans [&_p]:font-light [&_p]:text-lg [&_p]:text-green-leaf-800",
+    ]}
+  >
+    <h2
+      class:list={[
+        "font-serif font-medium",
+        "text-heading-sm md:text-heading-lg text-french-rose-400",
+      ]}
+    >
+      Homemade flavor for unforgettable celebrations
+    </h2>
+    <p>
+      Food is an act of love. We bring family tradition to your table with
+      homemade recipes made with fresh, high-quality ingredients.
+    </p>
+    <p>We offer a variety of menus to satisfy all tastes and occasions.</p>
+  </header>
+  <div
+    class:list={[
+      "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-5",
+      "gap-8 lg:gap-2 xl:gap-8",
+    ]}
+  >
+    {
+      menus.map((menu, index) => (
+        <article
+          class:list={[
+            "flex flex-col items-center",
+            "p-4",
+            { hidden: index === 2 || index === 5 || index === 8 },
+            "lg:first-of-type:col-span-3 lg:first-of-type:self-end",
+            "lg:last-of-type:col-span-3",
+          ]}
+        >
+          <h3
+            class:list={[
+              "cursor-pointer",
+              "font-serif font-semibold text-4xl text-center text-pretty text-green-leaf-800",
+              "hover:text-carnation-400 hover:transition-colors hover:duration-75 hover:ease-linear",
+            ]}
+          >
+            {menu.name}
+          </h3>
+          <p
+            class:list={[
+              "max-w-80",
+              "pt-5",
+              "font-sans font-light text-lg text-center text-pretty text-green-leaf-800",
+            ]}
+          >
+            {menu.detail}
+          </p>
+        </article>
+      ))
+    }
+    <Image
+      src={seafood}
+      alt="Seafood appetizer"
+      class:list={[
+        "lg:row-start-2 lg:col-start-2 lg:row-end-5",
+        "hidden lg:block",
+        "border-green-leaf-900 border-y-2 border-l-2 border-r-4",
+        "lg:min-h-[80%] xl:min-h-[90%]",
+        "object-cover rounded-full",
+        "place-self-center",
+      ]}
+    />
+  </div>
+  <div
+    class:list={[
+      "flex flex-col gap-7",
+      "pt-10 lg:pt-5",
+      "text-center",
+      "[&_p]:font-sans [&_p]:font-light [&_p]:text-lg [&_p]:text-green-leaf-800",
+    ]}
+  >
+    <p>
+      At La Chinacata, we adapt to your budget and vision to create a unique and
+      memorable event.
+    </p>
+    <p>
+      Contact us today and let us delight your guests with the homemade flavor
+      of La Chinacata!
+    </p>
+  </div>
+</section>
