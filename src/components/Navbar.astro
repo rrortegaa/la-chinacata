@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../assets/logo/logo-green.svg";
+import menu from "../assets/icons/menu.svg";
+import close from "../assets/icons/close.svg";
 
 const links = [
   { name: "About", href: "/about" },
@@ -28,7 +30,7 @@ const links = [
     class:list={[
       "section",
       "flex flex-row justify-between lg:items-stretch",
-      "gap-x-14",
+      "gap-x-16",
     ]}
   >
     <a href="/" class="flex items-center">
@@ -36,7 +38,12 @@ const links = [
     </a>
 
     <div class:list={["cursor-pointer flex lg:hidden place-items-center"]}>
-      <Image id="openmenu" src={logo} alt="abrir menú" class="w-6 h-6" />
+      <Image
+        id="openmenu"
+        src={menu}
+        alt="abrir menú"
+        class="w-8 h-8 text-green-leaf-950"
+      />
     </div>
 
     <section
@@ -108,6 +115,7 @@ const links = [
 >
   <main
     class:list={[
+      "border border-orange-500",
       "section",
       "flex flex-row justify-between",
       "font-serif text-5xl leading-4",
@@ -118,7 +126,12 @@ const links = [
     </a>
 
     <div class:list={["cursor-pointer flex place-items-center"]}>
-      <Image id="closemenu" src={logo} alt="cerrar menú" class="w-6 h-6" />
+      <Image
+        id="closemenu"
+        src={close}
+        alt="cerrar menú"
+        class="w-8 h-8 text-green-leaf-950"
+      />
     </div>
 
     <section
