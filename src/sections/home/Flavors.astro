@@ -1,0 +1,92 @@
+---
+import { Image } from "astro:assets";
+
+import appetizers from "../../assets/gallery/appetizers.jpeg";
+import backyardBrunch from "../../assets/gallery/backyard-brunch.jpeg";
+import barnParty from "../../assets/gallery/barn-party.jpeg";
+import beefSliders from "../../assets/gallery/beef-sliders.jpeg";
+import birthdayBrunch from "../../assets/gallery/birthday-brunch.jpeg";
+import birthdayDinner from "../../assets/gallery/birthday-dinner.jpeg";
+import brunch from "../../assets/gallery/brunch.jpeg";
+import chickenSalad from "../../assets/gallery/chicken-salad.jpeg";
+import formalDinner from "../../assets/gallery/formal-dinner.jpeg";
+
+const images = [
+  { image: birthdayDinner, class: "", position: "" },
+  { image: appetizers, class: "", position: "row-span-2" },
+  { image: backyardBrunch, class: "", position: "" },
+  { image: barnParty, class: "", position: "row-span-2" },
+  { image: beefSliders, class: "", position: "row-span-2" },
+  { image: birthdayBrunch, class: "object-bottom", position: "hidden md:block" },
+  { image: brunch, class: "", position: "hidden md:block" },
+  { image: chickenSalad, class: "object-top", position: "hidden md:block" },
+  { image: formalDinner, class: "object-bottom", position: "hidden md:block" },
+];
+---
+
+<section class="section">
+  <main class="flex flex-col gap-8">
+    <header
+      class:list={[
+        "flex flex-col gap-7 text-center",
+        "[&_p]:text-center [&_p]:text-lg",
+      ]}
+    >
+      <h2 class="font-serif text-french-rose-400 text-4xl sm:text-5xl md:text-7xl">
+        Flavors that inspire
+      </h2>
+
+      <p class="text-green-leaf-800">
+        At La Chinacata, food is more than sustenance; it's an expression of
+        love and family tradition.
+        <br />
+        We want you to experience up close the magic we create for special events.
+      </p>
+
+      <p class="text-green-leaf-800">
+        Take a look at our gallery and delight yourself with
+      </p>
+
+      <ul class="text-green-leaf-800 w-fit mx-auto list-['🌸'] [&_li]:pl-1 [&_li]:text-left">
+        <li>Exquisite dishes</li>
+        <li>Enchanting settings</li>
+        <li>Happy moments</li>
+      </ul>
+
+      <p class="text-green-leaf-800">
+        Looking for inspiration for your next event? You've come to the right
+        place!
+      </p>
+
+      <p class="text-green-leaf-800">
+        Let yourself be seduced by the flavors and creativity that La Chinacata
+        offers you.
+      </p>
+    </header>
+
+    <!-- gallery -->
+    <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-3 gap-3 max-h-[40vh] h-full min-h-[400px]">
+      {
+        images.map((img, i) => (
+          <div class:list={[
+            "overflow-hidden",
+            "rounded",
+            img.position
+          ]}>
+            <Image
+              src={img.image}
+              alt={`Gallery image ${i + 1}`}
+              class:list={[
+                "bg-black/10",
+                "object-cover object-center",
+                "w-full h-full",
+                "hover:scale-110 transition-transform duration-300 ease-in-out",
+                img.class
+              ]}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </main>
+</section>
