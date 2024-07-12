@@ -2,6 +2,7 @@
 import "@fontsource/kurale";
 import "@fontsource-variable/outfit"; // Supports weights 100-900
 import Navbar from "../components/Navbar.astro";
+import SocialMedia from "../components/SocialMedia.astro";
 import Footer from "../components/Footer.astro";
 
 interface Props {
@@ -31,6 +32,7 @@ const { class: className, title } = Astro.props;
       class:list={["flex flex-col", "gap-14 md:gap-28", "mt-24", className]}
     >
       <slot />
+      <SocialMedia />
     </main>
     <Footer />
   </body>

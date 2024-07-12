@@ -1,0 +1,70 @@
+---
+import { Image } from "astro:assets";
+import garland from "../../assets/about/flowers.svg";
+import family from "../../assets/about/family.png";
+---
+
+<section class="section-full pt-20">
+  <article class:list={["section", "grid grid-cols-1 lg:grid-cols-2", "gap-9"]}>
+    <header
+      class:list={[
+        "flex flex-col items-center",
+        "space-y-6",
+        "text-center",
+        "[&_p]:text-green-leaf-800",
+      ]}
+    >
+      <span class="font-light text-green-leaf-800">Welcome to La chinacata</span
+      >
+      <h2
+        class:list={[
+          "font-serif",
+          "text-heading-sm md:text-heading-lg",
+          "text-pretty text-french-rose-400",
+        ]}
+      >
+        Memorable <br />& custom <br />design catering
+      </h2>
+      <Image
+        src={garland}
+        alt="Flowers garland"
+        class:list={["object-contain", "place-self-center", "h-16 md:h-24"]}
+      />
+      <p class:list={["font-light", "text-lg", "mx-auto", "mt-4"]}>
+        We are delighted to extend the warmest of welcomes to our gastronomic
+        corner, where homemade flavors and handcrafted dishes are the hallmark
+        of our Reyna family.
+      </p>
+      <p class:list={["font-light", "text-lg", "mx-auto", "mt-4"]}>
+        At La Chinacata, each dish is infused with the love and passion that
+        only a family-owned business can offer. From our traditional recipes to
+        our innovative creations, every bite is an experience that celebrates
+        the authenticity and care with which we craft each detail.
+      </p>
+      <p class:list={["font-light", "text-lg", "mx-auto", "mt-4"]}>
+        We take pride in sharing not only our food but also our history and
+        values with you. We are more than just a catering business; we are a
+        family dedicated to providing you with unforgettable moments through the
+        magic of homemade cooking.
+      </p>
+      <p class:list={["font-light", "text-lg", "mx-auto", "mt-4"]}>
+        We hope you enjoy this culinary journey with us, and may each flavor
+        transport you to moments of joy and connection. Welcome to La Chinacata,
+        where every dish tells a story, and every customer becomes a part of our
+        family!
+      </p>
+    </header>
+    <div class:list={["place-self-center"]}>
+      <Image
+        src={family}
+        alt="La Chinacata family"
+        class:list={[
+          "object-cover object-center on",
+          "border-l-2 border-t-4 border-green-leaf-800",
+          "rounded-tl-full rounded-bl-sm rounded-tr-full rounded-br-sm",
+          "w-full",
+        ]}
+      />
+    </div>
+  </article>
+</section>

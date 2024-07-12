@@ -77,12 +77,12 @@ module.exports = {
           fontWeight: '500'
         }],
         'heading-sm': ['2.75rem', {
-          lineHeight: '1.2',
+          lineHeight: '1.07',
           letterSpacing: '-0.005em',
           fontWeight: '500'
         }],
         'heading-lg': ['5rem', {
-          lineHeight: '1.2',
+          lineHeight: '1.07',
           letterSpacing: '-0.005em',
           fontWeight: '500'
         }],

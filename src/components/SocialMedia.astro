@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+import insta from "../assets/social-media/instagram.svg";
+import fb from "../assets/social-media/facebook.svg";
+import tt from "../assets/social-media/tiktok.svg";
+
+const socials = [
+  {
+    name: "Instagram",
+    link: "https://www.instagram.com/la_chinacata?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    icon: insta,
+  },
+  {
+    name: "TikTok",
+    link: "https://www.tiktok.com/@chinacatareyna3?_t=8nwpU3l3PD4&_r=1",
+    icon: tt,
+  },
+  {
+    name: "Facebook",
+    link: "https://www.facebook.com/p/La-chinacata-100064299783124/",
+    icon: fb,
+  },
+];
+---
+
+<section
+  id="follow-us"
+  class:list={["section-full", "bg-french-rose-400", "py-32"]}
+>
+  <div
+    class:list={[
+      "flex flex-col",
+      "md:flex-row justify-between items-center",
+      "gap-y-14",
+      "mx-auto",
+      "max-w-[1160px]",
+      "px-8",
+      "w-full",
+    ]}
+  >
+    <h2
+      class:list={[
+        "font-serif text-heading-lg text-pretty text-vista-white",
+        "max-w-[30rem]",
+      ]}
+    >
+      Follow us<br />in our<br />social media
+    </h2>
+    <div class="flex items-center justify-between gap-x-6">
+      {
+        socials.map((social) => (
+          <a href={social.link}>
+            <Image
+              src={social.icon}
+              alt={social.name}
+              class:list={[
+                "cursor-pointer hover:scale-95",
+                "hover:transition-all hover:duration-150 hover:ease-in-out",
+              ]}
+            />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>
