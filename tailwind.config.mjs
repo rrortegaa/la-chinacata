@@ -7,7 +7,7 @@ module.exports = {
 		extend: {
       backgroundImage: {
         'home-hero': 'url("/src/assets/home/appetizers.jpeg")',
-        'home-about': 'url("/src/assets/about/chinacata-staff.jpeg")',
+        'about-hero': 'url("/src/assets/about/chinacata-staff.jpeg")',
       },
       colors: {
         'carnation-50': '#FFF1F2',
