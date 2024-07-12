@@ -8,6 +8,8 @@ module.exports = {
       backgroundImage: {
         'home-hero': 'url("/src/assets/home/appetizers.jpeg")',
         'about-hero': 'url("/src/assets/about/chinacata-staff.jpeg")',
+        'gallery-hero': 'url("/src/assets/gallery/corporate-buffet.jpeg")',
+        'contact-hero': 'url("/src/assets/gallery/food-truck.jpeg")',
       },
       colors: {
         'carnation-50': '#FFF1F2',
