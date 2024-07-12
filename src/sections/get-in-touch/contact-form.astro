@@ -1,0 +1,185 @@
+---
+const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
+---
+
+<section class="section">
+  <main class="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <aside class="flex flex-col gap-4 text-center text-green-leaf-800">
+      <h2
+        class="font-serif font-medium text-heading-sm md:text-heading-lg text-french-rose-400 text-center"
+      >
+        Let’s give<br />
+        life to your<br />
+        dream <br class="hidden md:block" />
+        event!
+      </h2>
+
+      <p>
+        The secret to an unforgettable event starts with understanding your
+        vision. Tell us all the details! What kind of party are you picturing?
+        Is it a glamorous wedding, a laid-back backyard BBQ, or a themed
+        extravaganza? The more you share, the better we can help you bring it to
+        life.
+      </p>
+
+      <p>
+        We are here to help you customize the ideal menu and pricing for your
+        next event.
+      </p>
+
+      <p>Let's get this party started!</p>
+    </aside>
+
+    <form
+      id="contact-form"
+      class:list={[
+        "relative",
+        "space-y-3",
+        "*:py-2 *:px-4 *:w-full",
+        "*:bg-green-leaf-500/10",
+        "*:placeholder:text-green-leaf-800 *:text-green-leaf-800",
+        "*:rounded *:font-semibold",
+      ]}
+    >
+      <input
+        type="hidden"
+        name="subject"
+        value="Nuevo cliente [la chinacata]"
+      />
+      <input type="hidden" name="access_key" value={FORM_SUBMISSION_KEY} />
+      <input type="hidden" name="botcheck" />
+
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="phone" placeholder="Phone" required />
+      <input type="text" name="event-type" placeholder="Event type" required />
+      <input
+        type="text"
+        name="date"
+        required
+        placeholder="Event date"
+        onfocus="(this.type='date')"
+        onblur="(this.type='text')"
+      />
+      <input type="text" name="location" required placeholder="Location" />
+      <input
+        type="number"
+        name="guest-count"
+        required
+        placeholder="Guest count"
+        class="w-full"
+      />
+      <textarea
+        name="event-details"
+        rows="5"
+        placeholder="Tell us more about your event"
+        required></textarea>
+
+      <button type="submit" class="!bg-green-leaf-800 !text-lime-50"
+        >Submit</button
+      >
+      <div
+        id="loading-message"
+        class:list={[
+          "hidden",
+          "absolute top-0 left-0",
+          "!bg-black/5 backdrop-blur-3xl rounded",
+          "w-full h-full",
+          "flex items-center justify-center",
+          "animate-pulse",
+        ]}
+      >
+        <h2 class="text-lg">Submitting...</h2>
+      </div>
+    </form>
+
+    <div
+      id="success-message"
+      class:list={[
+        "text-center text-4xl font-serif",
+        "hidden flex-col gap-10 p-10",
+        "bg-green-leaf-500/10",
+      ]}
+    >
+      <p>🎉</p>
+      <h2 class="font-semibold text-green-leaf-800">
+        We have received your information <br />
+        <br />
+        We'll get back to you shortly.
+      </h2>
+      <button
+        id="return-to-form"
+        class:list={[
+          "bg-green-leaf-800 hover:bg-green-leaf-900",
+          "text-white text-base",
+          "max-w-screen-sm mx-auto p-2 min-w-28",
+          "rounded",
+        ]}
+      >
+        Send antoher message →
+      </button>
+    </div>
+  </main>
+</section>
+
+<!-- <section class="section"></section> -->
+
+<script>
+  const service = "https://api.web3forms.com/submit";
+  const form = document.getElementById("contact-form")! as HTMLFormElement;
+  const successMessage = document.getElementById("success-message")!;
+  const returnButton = document.getElementById("return-to-form")!;
+  const loadingMessage = document.getElementById("loading-message")!;
+
+  function hideForm() {
+    form.classList.add("hidden");
+    successMessage.classList.remove("hidden");
+    successMessage.classList.add("flex");
+  }
+
+  function showForm() {
+    form.classList.remove("hidden");
+    successMessage.classList.add("hidden");
+    successMessage.classList.remove("flex");
+    loadingMessage.classList.add("hidden");
+  }
+
+  function showLoading() {
+    loadingMessage.classList.remove("hidden");
+  }
+
+  function hideLoading() {
+    loadingMessage.classList.add("hidden");
+  }
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    showLoading();
+    const formData = new FormData(form);
+
+    fetch(service, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        ...Object.fromEntries(formData),
+      }),
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.success) {
+          form.reset();
+          hideForm();
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      })
+      .catch((error) => {
+        alert("Something went wrong. Please try again.");
+      })
+      .finally(() => {
+        hideLoading();
+      });
+  });
+
+  returnButton.addEventListener("click", showForm);
+</script>
