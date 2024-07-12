@@ -1,6 +1,8 @@
 ---
-import Event from "../../components/Event.astro";
-import eventImage from "../../assets/home/social-event.jpeg";
+import { Image } from "astro:assets";
+import wedding from "../../assets/home/events/wedding-buffet.jpeg";
+import social from "../../assets/home/events/social-event.jpeg";
+import corporate from "../../assets/home/events/corporate-brunch.jpeg";
 
 const events = [
   {
@@ -9,191 +11,205 @@ const events = [
       "In our bespoke catering service we blend the warmth of homemade flavors with the elegance of custom-designed menus to create unforgettable culinary experiences.",
     moreDetails:
       "At La Chinacata, we understand that your wedding day is one of the most significant moments in your life, and we are dedicated to making it truly special.",
-    image: eventImage,
-    alt: "primera imagen",
+    image: wedding,
+    alt: "Mexican wedding buffet served in cazuelas de barro.",
   },
   {
     name: "Social",
     detail:
-      "In our bespoke catering service we blend the warmth of homemade flavors with the elegance of custom-designed menus to create unforgettable culinary experiences.",
+      "This is some text for social events with the elegance of custom-designed menus to create unforgettable culinary experiences.",
     moreDetails:
       "At La Chinacata, we understand that your wedding day is one of the most significant moments in your life, and we are dedicated to making it truly special.",
-    image: eventImage,
-    alt: "segunda imagen",
+    image: social,
+    alt: "Fresh fruit table for quinceanera party.",
   },
   {
     name: "Corporate",
     detail:
-      "In our bespoke catering service we blend the warmth of homemade flavors with the elegance of custom-designed menus to create unforgettable culinary experiences.",
+      "This is some text for corporate events with the warmth of homemade flavors with the elegance of custom-designed menus to create unforgettable culinary experiences.",
     moreDetails:
       "At La Chinacata, we understand that your wedding day is one of the most significant moments in your life, and we are dedicated to making it truly special.",
-    image: eventImage,
-    alt: "tercera imagen",
+    image: corporate,
+    alt: "Corporate brunch service with personalized menu.",
   },
 ];
 ---
 
-<section id="events" class:list={["section-full", "bg-shark-50", "py-16"]}>
-  <div
+<section id="events" class:list={["section", "md:hidden", "py-16"]}>
+  <h2
     class:list={[
-      "border border-dashed border-lime-400",
-      "section",
-      "grid grid-cols-1 md:grid-cols-2 md:gap-5 lg:gap-7",
+      "pb-10",
+      "font-serif text-heading-sm text-center text-french-rose-400",
     ]}
   >
-    <h2
-      class:list={[
-        "md:hidden",
-        "pb-6",
-        "font-serif text-heading-sm lg:text-heading-lg text-center text-carnation-400 ",
-      ]}
-    >
-      Celebrating <br /> life's moments
-    </h2>
-    {
-      events.map((event) => (
-        <Event
-          image={event.image}
+    Celebrating <br /> life's moments
+  </h2>
+  {
+    events.map((event) => (
+      <article
+        class:list={[
+          "flex flex-col items-center",
+          "gap-6",
+          "odd:pt-10",
+          "last-of-type:pt-10",
+        ]}
+      >
+        <Image
+          src={event.image}
           alt={event.alt}
-          name={event.name}
-          detail={event.detail}
-          moreDetails={event.moreDetails}
-          class=" first-of-type:pt-8 pt-12"
+          class:list={[
+            "border-green-leaf-800 border-y-2 border-l-2 border-r-4",
+            "w-full",
+            "object-cover place-self-center",
+            "rounded-full",
+          ]}
+        />
+
+        <div
+          class:list={[
+            "space-y-4",
+            "text-center text-pretty text-green-leaf-800",
+            "[&_p]:font-light [&_p]:text-lg",
+          ]}
+        >
+          <span class:list={["cursor-pointer", "pt-8", "font-bold text-lg"]}>
+            {event.name}
+          </span>
+          <p>{event.detail}</p>
+          <p>{event.moreDetails}</p>
+        </div>
+      </article>
+    ))
+  }
+</section>
+
+<!-- desktop -->
+<section class:list={["section"]}>
+  <article class:list={["hidden", "md:grid md:grid-cols-2", "gap-2"]}>
+    {
+      events.map((event, index) => (
+        <Image
+          src={event.image}
+          alt={event.alt}
+          class:list={[
+            "border-green-leaf-800 border-y-2 border-l-2 border-r-4",
+            "w-full",
+            "object-cover place-self-center",
+            "rounded-full",
+            { hidden: index !== 0 },
+            event.name.toLowerCase(),
+          ]}
         />
       ))
     }
-  </div>
 
-  <!-- <Image
-    src={eventImage}
-    alt=""
-    class:list={[
-      "border-green-leaf border-y-2 border-l-2 border-r-4",
-      "md:col-start-1",
-      "object-cover rounded-full",
-      "max-w-[90%] place-self-center",
-    ]}
-  /> -->
-
-  <!-- <span class:list={["md:hidden"]}>Weddings</span>
-    <p
-      class:list={[
-        "bg-shark",
-        "md:hidden",
-        "md:absolute",
-        "md:-z-10",
-        "font-sans font-light text-green-leaf text-lg text-center text-pretty",
-      ]}
-    >
-      In our bespoke catering service we blend the warmth of homemade flavors
-      with the elegance of custom-designed menus to create unforgettable
-      culinary experiences. <br />
-      <br /> At La Chinacata, we understand that your wedding day is one of the most
-      significant moments in your life, and we are dedicated to making it truly special.
-    </p>
-
-    <span class:list={["md:hidden"]}>Social</span>
-    <p
-      class:list={[
-        "bg-vista-white",
-        "md:hidden",
-        "md:absolute,",
-        "md:-z-20",
-        "font-sans font-light text-green-leaf text-lg text-center text-pretty",
-      ]}
-    >
-      In our bespoke catering service we blend the warmth of homemade flavors
-      with the elegance of custom-designed menus to create unforgettable
-      culinary experiences. <br />
-      <br /> At La Chinacata, we understand that your wedding day is one of the most
-      significant moments in your life, and we are dedicated to making it truly special.
-    </p> -->
-
-  <!-- Desktop events -->
-
-  <!-- <div
-      class:list={[
-        "hidden md:flex",
-        "border border-carnation",
-        "justify-between",
-        "mt-9 mx-auto",
-        "w-10/12",
-      ]}
-    >
-      <span
-        class:list={["cursor-pointer", "font-sans", "text-green-leaf text-lg"]}
-      >
-        Weddings
-      </span>
-      <span
-        class:list={["cursor-pointer", "font-sans", "text-green-leaf text-lg"]}
-      >
-        Social
-      </span>
-      <span
-        class:list={["cursor-pointer", "font-sans", "text-green-leaf text-lg"]}
-      >
-        Corporate
-      </span>
-    </div>
-    <div class:list={["bg-carnation", "md:relative", "mt-6"]}>
-      <p
-        class:list={[
-          "bg-pink-400",
-          "md:absolute",
-          "font-sans font-light text-green-leaf text-lg text-center text-pretty",
-        ]}
-      >
-        In our bespoke catering service we blend the warmth of homemade flavors
-        with the elegance of custom-designed menus to create unforgettable
-        culinary experiences. <br />
-        <br /> At La Chinacata, we understand that your wedding day is one of the
-        most significant moments in your life, and we are dedicated to making it
-        truly special.
-      </p>
-      <p
-        class:list={[
-          "bg-shark",
-          "hidden md:block",
-          "md:absolute",
-          "md:-z-10",
-          "font-sans font-light text-green-leaf text-lg text-center text-pretty",
-        ]}
-      >
-        In our bespoke catering service we blend the warmth of homemade flavors
-        with the elegance of custom-designed menus to create unforgettable
-        culinary experiences. <br />
-        <br /> At La Chinacata, we understand that your wedding day is one of the
-        most significant moments in your life, and we are dedicated to making it
-        truly special.
-      </p>
-      <p
-        class:list={[
-          "bg-vista-white",
-          "hidden md:block",
-          "md:absolute,",
-          "md:-z-20",
-          "font-sans font-light text-green-leaf text-lg text-center text-pretty",
-        ]}
-      >
-        In our bespoke catering service we blend the warmth of homemade flavors
-        with the elegance of custom-designed menus to create unforgettable
-        culinary experiences. <br />
-        <br /> At La Chinacata, we understand that your wedding day is one of the
-        most significant moments in your life, and we are dedicated to making it
-        truly special.
-      </p>
-    </div>
     <div
       class:list={[
-        "bg-carnation rounded-full",
-        "font-sans font-semibold",
-        "max-w-32",
-        "mt-8",
-        "p-4",
-        "text-vista-white text-base",
+        "[&_p]:text-center text-pretty [&_p]:text-green-leaf-800",
+        "[&_p]:font-light [&_p]:text-lg",
       ]}
     >
-      Get in touch
-    </div> -->
+      <h2
+        class:list={[
+          "md:pb-7 lg:pb-10",
+          "font-serif md:text-heading-md lg:text-heading-lg text-french-rose-400",
+        ]}
+      >
+        Celebrating <br /> life's moments
+      </h2>
+      <div
+        id="events"
+        class:list={[
+          "flex justify-around items-center",
+          "gap-4",
+          "[&_span]:text-lg [&_span]:text-green-leaf-800",
+        ]}
+      >
+        {
+          events.map((event, index) => (
+            <span
+              id={event.name.toLowerCase()}
+              class:list={[
+                "cursor-pointer",
+                "hover:text-french-rose-400",
+                { "font-bold": index === 0 },
+              ]}
+            >
+              {event.name}
+            </span>
+          ))
+        }
+      </div>
+      {
+        events.map((event, index) => (
+          <div
+            class:list={[
+              "pt-4",
+              "space-y-4",
+              { hidden: index !== 0 },
+              event.name.toLowerCase(),
+            ]}
+          >
+            <p>{event.detail}</p>
+            <p>{event.moreDetails}</p>
+          </div>
+        ))
+      }
+    </div>
+  </article>
 </section>
+
+<script>
+  const wedding = document.getElementById("weddings");
+  const social = document.getElementById("social");
+  const corporate = document.getElementById("corporate");
+  const weddingElements = document.getElementsByClassName("weddings");
+  const socialElements = document.getElementsByClassName("social");
+  const corporateElements = document.getElementsByClassName("corporate");
+
+  wedding?.addEventListener("click", () => {
+    wedding.classList.add("font-bold");
+    social?.classList.remove("font-bold");
+    corporate?.classList.remove("font-bold");
+    for (const element of weddingElements) {
+      element.classList.remove("hidden");
+    }
+    for (const element of socialElements) {
+      element.classList.add("hidden");
+    }
+    for (const element of corporateElements) {
+      element.classList.add("hidden");
+    }
+  });
+
+  social?.addEventListener("click", () => {
+    wedding?.classList.remove("font-bold");
+    social.classList.add("font-bold");
+    corporate?.classList.remove("font-bold");
+    for (const element of weddingElements) {
+      element.classList.add("hidden");
+    }
+    for (const element of socialElements) {
+      element.classList.remove("hidden");
+    }
+    for (const element of corporateElements) {
+      element.classList.add("hidden");
+    }
+  });
+
+  corporate?.addEventListener("click", () => {
+    wedding?.classList.remove("font-bold");
+    social?.classList.remove("font-bold");
+    corporate.classList.add("font-bold");
+
+    for (const element of weddingElements) {
+      element.classList.add("hidden");
+    }
+    for (const element of socialElements) {
+      element.classList.add("hidden");
+    }
+    for (const element of corporateElements) {
+      element.classList.remove("hidden");
+    }
+  });
+</script>

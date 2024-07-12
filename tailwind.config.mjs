@@ -82,6 +82,11 @@ module.exports = {
           letterSpacing: '-0.005em',
           fontWeight: '500'
         }],
+        'heading-md': ['3.5rem', {
+          lineHeight: '1.07',
+          letterSpacing: '-0.005em',
+          fontWeight: '500'
+        }],
         'heading-lg': ['5rem', {
           lineHeight: '1.07',
           letterSpacing: '-0.005em',
