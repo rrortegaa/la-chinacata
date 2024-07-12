@@ -6,7 +6,8 @@ module.exports = {
 	theme: {
 		extend: {
       backgroundImage: {
-        'home-hero': 'url("/src/assets/appetizers.jpeg")',
+        'home-hero': 'url("/src/assets/home/appetizers.jpeg")',
+        'home-about': 'url("/src/assets/about/chinacata-staff.jpeg")',
       },
       colors: {
         'carnation-50': '#FFF1F2',
@@ -53,8 +54,8 @@ module.exports = {
         'shark-700': '#4F4F4F',
         'shark-800': '#454545',
         'shark-900': '#3D3D3D',
-        'shark-950': '#262626',
-        'vista-white': '#FFFBFB', // background
+        'shark-950': '#262626', // black primary
+        'vista-white': '#FFFBFB', // white background
       },
       fontFamily: {
         serif: ['Kurale', ...defaultTheme.fontFamily.serif],
