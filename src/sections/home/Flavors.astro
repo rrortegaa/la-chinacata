@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
+import mexicanBuffet from "../../assets/gallery/mexican-buffet.jpeg";
 import appetizers from "../../assets/gallery/appetizers.jpeg";
 import backyardBrunch from "../../assets/gallery/backyard-brunch.jpeg";
 import barnParty from "../../assets/gallery/barn-party.jpeg";
@@ -8,22 +9,20 @@ import beefSliders from "../../assets/gallery/beef-sliders.jpeg";
 import birthdayBrunch from "../../assets/gallery/birthday-brunch.jpeg";
 import birthdayDinner from "../../assets/gallery/birthday-dinner.jpeg";
 import brunch from "../../assets/gallery/brunch.jpeg";
-import chickenSalad from "../../assets/gallery/chicken-salad.jpeg";
 import formalDinner from "../../assets/gallery/formal-dinner.jpeg";
 
 const images = [
   { image: birthdayDinner, class: "", position: "" },
-  { image: appetizers, class: "", position: "row-span-2" },
+  { image: mexicanBuffet, class: "", position: "row-span-2" },
   { image: backyardBrunch, class: "", position: "" },
   { image: barnParty, class: "", position: "row-span-2" },
   { image: beefSliders, class: "", position: "row-span-2" },
   {
     image: birthdayBrunch,
-    class: "object-bottom",
-    position: "hidden md:block",
+    class: "",
+    position: "row-span-2 hidden md:block",
   },
   { image: brunch, class: "", position: "hidden md:block" },
-  { image: chickenSalad, class: "object-top", position: "hidden md:block" },
   { image: formalDinner, class: "object-bottom", position: "hidden md:block" },
 ];
 ---

@@ -1,14 +1,20 @@
 ---
-import { Image } from "astro:assets";
-import cheers from "../../assets/home/clients/cheers.png";
+import { Image, imageConfig } from "astro:assets";
+import luis from "../../assets/home/clients/luis-n.jpeg";
 
 const reviews = [
   {
-    name: "Luisa & Andrew",
+    name: "Luis N.",
     review:
-      "I hired La Chinacata for my wedding and I couldn't be happier. The food was delicious and the service was impeccable. I highly recommend them for any event.",
-    image: cheers,
+      "This family owned business has come a long way and they  have never sacrificed quality even when times got tough. Food and service had always been the forefront, and they take a lot of pride in the food they make. If you haven't had their aguas frescas, they were always the best on a warm day.",
+    image: luis,
   },
+  // {
+  //   name: "Sara & John",
+  //   review:
+  //     "We hired La Chinacata for our corporate event and we were very pleased with the service. The food was delicious and the staff was very professional.",
+  //   image: cheers,
+  // },
 ];
 ---
 
@@ -41,7 +47,12 @@ const reviews = [
           <Image
             src={review.image}
             alt={review.name}
-            class:list={["basis-1/2", "rounded-md", "mx-auto"]}
+            class:list={[
+              "basis-1/2",
+              "rounded-3xl",
+              "mx-auto",
+              "object-contain h-80",
+            ]}
           />
           <div
             class:list={[
