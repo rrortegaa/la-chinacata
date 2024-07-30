@@ -3,15 +3,24 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
 ---
 
 <section class="section">
-  <main class="grid grid-cols-1 md:grid-cols-2 gap-10">
-    <aside class="flex flex-col gap-4 text-center text-green-leaf-800">
+  <main class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-24">
+    <aside
+      class:list={[
+        "flex flex-col",
+        "space-y-5",
+        "font-sans font-light",
+        "text-lg text-center text-pretty text-green-leaf-800",
+      ]}
+    >
       <h2
-        class="font-serif font-medium text-heading-sm md:text-heading-lg text-french-rose-400 text-center"
+        class="font-serif text-heading-sm md:text-heading-md lg:text-heading-lg text-center text-french-rose-400 pb-5"
       >
-        Let’s give<br />
-        life to your<br />
-        dream <br class="hidden md:block" />
-        event!
+        Let’s
+        <br class="block sm:hidden" />
+        give life<br />to your
+        <br />
+
+        dream event!
       </h2>
 
       <p>
@@ -34,7 +43,7 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
       id="contact-form"
       class:list={[
         "relative",
-        "space-y-3",
+        "space-y-4",
         "*:py-2 *:px-4 *:w-full",
         "*:bg-green-leaf-500/10",
         "*:placeholder:text-green-leaf-800 *:text-green-leaf-800",
