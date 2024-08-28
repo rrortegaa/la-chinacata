@@ -81,17 +81,17 @@ module.exports = {
         }],
         'heading-sm': ['2.75rem', {
           lineHeight: '1.07',
-          letterSpacing: '-0.005em',
+          letterSpacing: '-0.01em',
           fontWeight: '500'
         }],
         'heading-md': ['3.5rem', {
           lineHeight: '1.07',
-          letterSpacing: '-0.005em',
+          letterSpacing: '-0.01em',
           fontWeight: '500'
         }],
         'heading-lg': ['5rem', {
-          lineHeight: '1.07',
-          letterSpacing: '-0.005em',
+          lineHeight: '1.05',
+          letterSpacing: '-0.01em',
           fontWeight: '500'
         }],
       }

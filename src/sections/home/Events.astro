@@ -18,7 +18,6 @@ const events = [
     detail:
       "From birthdays to anniversaries, our social events are synonymous with joy and great taste. Our extensive experience allows us to adapt to any type of celebration, offering varied and delicious menus that will satisfy all palates.",
     moreDetails: "",
-    // "At La Chinacata, we understand that your wedding day is one of the most significant moments in your life, and we are dedicated to making it truly special.",
     image: social,
     alt: "Fresh fruit table for quinceanera party.",
   },
@@ -27,7 +26,6 @@ const events = [
     detail:
       "Looking for a caterer to make your corporate events memorable? Our home-cooked cuisine will allow you to create a relaxed and productive environment where your employees and clients will feel valued and cared for. From coffee breaks to formal dinners, we offer customized culinary solutions for every occasion.",
     moreDetails: "",
-    // "At La Chinacata, we understand that your wedding day is one of the most significant moments in your life, and we are dedicated to making it truly special.",
     image: corporate,
     alt: "Corporate brunch service with personalized menu.",
   },
@@ -41,9 +39,9 @@ const events = [
       "font-serif text-heading-sm text-center text-french-rose-400",
     ]}
   >
-    Celebrating <br /> life's moments
+    Celebrating<br />life's moments
   </h2>
-  <h3 class:list={["font-light text-xl text-center text-green-leaf-800"]}>
+  <h3 class:list={["font-extralight text-lg text-center text-green-leaf-900"]}>
     In our catering service we blend the warmth of homemade flavors with the
     elegance of custom-designed menus to create unforgettable culinary
     experiences.
@@ -54,7 +52,7 @@ const events = [
         class:list={[
           "flex flex-col items-center",
           "gap-6",
-          "odd:pt-10",
+          "pt-10",
           "last-of-type:pt-10",
         ]}
       >
@@ -62,21 +60,21 @@ const events = [
           src={event.image}
           alt={event.alt}
           class:list={[
-            "border-green-leaf-800 border-y-2 border-l-4 border-r-2",
+            "border-green-leaf-900 border-y-2 border-l-4 border-r-2",
             "object-cover place-self-center",
             "rounded-full",
-            "w-full",
+            "w-11/12",
           ]}
         />
 
         <div
           class:list={[
             "space-y-4",
-            "text-center text-pretty text-green-leaf-800",
-            "[&_p]:font-light [&_p]:text-lg",
+            "text-center text-pretty text-green-leaf-900",
+            "[&_p]:font-extralight [&_p]:text-base",
           ]}
         >
-          <span class:list={["cursor-pointer", "pt-8", "font-bold text-lg"]}>
+          <span class:list={["cursor-pointer", "mt-8", "font-bold text-lg"]}>
             {event.name}
           </span>
           <p>{event.detail}</p>
@@ -89,7 +87,7 @@ const events = [
 
 <!-- desktop -->
 <section class:list={["section"]}>
-  <article class:list={["hidden", "md:grid md:grid-cols-2", "gap-2"]}>
+  <article class:list={["hidden", "md:grid md:grid-cols-2", "gap-4"]}>
     {
       events.map((event, index) => (
         <Image
@@ -97,9 +95,9 @@ const events = [
           alt={event.alt}
           class:list={[
             "border-green-leaf-800 border-y-2 border-l-4 border-r-2",
-            "w-full",
             "object-cover place-self-center",
             "rounded-full",
+            "w-11/12",
             { hidden: index !== 0 },
             event.name.toLowerCase(),
           ]}
@@ -109,22 +107,24 @@ const events = [
 
     <div
       class:list={[
-        "[&_p]:text-center text-pretty [&_p]:text-green-leaf-800",
-        "[&_p]:font-light [&_p]:text-lg",
+        "[&_p]:text-center text-pretty [&_p]:text-green-leaf-900",
+        "[&_p]:font-extralight [&_p]:text-lg",
       ]}
     >
       <h2
         class:list={[
-          "md:pb-7 lg:pb-10",
+          "md:pb-7 lg:py-10",
           "font-serif md:text-heading-md lg:text-heading-lg text-french-rose-400",
         ]}
       >
-        Celebrating <br /> life's moments
+        Celebrating<br />&nbsp;life's moments
       </h2>
       <h3
         class:list={[
+          "mx-auto",
           "pb-10",
-          "font-sans text-lg text-center text-green-leaf-800",
+          "font-sans font-extralight text-xl text-center text-green-leaf-900",
+          "w-11/12",
         ]}
       >
         In our catering service we blend the warmth of homemade flavors with the
@@ -135,8 +135,9 @@ const events = [
         id="events"
         class:list={[
           "flex justify-around items-center",
-          "gap-4",
-          "[&_span]:text-lg [&_span]:text-green-leaf-800",
+          "mx-auto",
+          "[&_span]:text-xl [&_span]:text-green-leaf-900",
+          "w-11/12",
         ]}
       >
         {
@@ -145,7 +146,7 @@ const events = [
               id={event.name.toLowerCase()}
               class:list={[
                 "cursor-pointer",
-                "hover:text-french-rose-400",
+                "text-xl text-center hover:text-french-rose-400",
                 { "font-bold": index === 0 },
               ]}
             >
@@ -158,8 +159,9 @@ const events = [
         events.map((event, index) => (
           <div
             class:list={[
-              "pt-4",
-              "space-y-4",
+              "mx-auto",
+              "pt-5 space-y-4",
+              "w-11/12",
               { hidden: index !== 0 },
               event.name.toLowerCase(),
             ]}
