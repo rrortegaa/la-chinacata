@@ -8,9 +8,8 @@ const events = [
   {
     name: "Weddings",
     detail:
-      "In our catering service we blend the warmth of homemade flavors with the elegance of custom-designed menus to create unforgettable culinary experiences.",
-    moreDetails:
       "At La Chinacata, we understand that your wedding day is one of the most significant moments in your life, and we are dedicated to making it truly special.",
+    moreDetails: "",
     image: wedding,
     alt: "Mexican wedding buffet served in cazuelas de barro.",
   },
@@ -44,6 +43,11 @@ const events = [
   >
     Celebrating <br /> life's moments
   </h2>
+  <h3 class:list={["font-light text-xl text-center text-green-leaf-800"]}>
+    In our catering service we blend the warmth of homemade flavors with the
+    elegance of custom-designed menus to create unforgettable culinary
+    experiences.
+  </h3>
   {
     events.map((event) => (
       <article
@@ -117,6 +121,16 @@ const events = [
       >
         Celebrating <br /> life's moments
       </h2>
+      <h3
+        class:list={[
+          "pb-10",
+          "font-sans text-lg text-center text-green-leaf-800",
+        ]}
+      >
+        In our catering service we blend the warmth of homemade flavors with the
+        elegance of custom-designed menus to create unforgettable culinary
+        experiences.
+      </h3>
       <div
         id="events"
         class:list={[
