@@ -6,105 +6,90 @@ import garland from "../../assets/about/flowers.svg";
 ---
 
 <section class="section-full space-y-10">
-  <article class:list={["section", "grid grid-cols-1 lg:grid-cols-2", "gap-9"]}>
-    <div class:list={["place-self-center"]}>
+  <div class:list={["section", "grid grid-cols-1 md:grid-cols-2", "gap-x-9"]}>
+    <article class:list={["grid grid-cols-1", "gap-2"]}>
       <Image
         src={founder}
         alt="La Chinacata founder"
         class:list={[
-          "object-cover object-center on",
           "border-l-2 border-t-4 border-green-leaf-800",
+          "object-cover object-center place-self-center",
           "rounded-tl-full rounded-bl-full rounded-tr-full rounded-br-full",
-          "w-full",
+          "w-5/6 h-auto",
         ]}
       />
-    </div>
-    <header
-      class:list={[
-        "flex flex-col items-center",
-        "space-y-6",
-        "text-center",
-        "[&_p]:text-green-leaf-800",
-      ]}
-    >
-      <Image
-        src={garland}
-        alt="Flowers garland"
-        class:list={["object-contain", "place-self-center", "h-16 md:h-24"]}
-      />
-      <p class:list={["font-light", "text-lg", "mx-auto", "mt-4"]}>
-        Mi nombre es Rocío Reyna, pero todos me conocen como La Chinacata. Un
-        apodo que mi papá, Jorge Reyna, me puso desde pequeña y que hoy
-        representa mi gran pasión: la cocina.
-      </p>
-      <p class:list={["font-light", "text-lg", "mx-auto", "mt-4"]}>
-        Crecí entre ollas y sartenes, aprendiendo los secretos de la cocina de
-        mi familia. Hoy, La Chinacata es el resultado de esa herencia culinaria
-        y el sueño de compartir con todos ustedes los sabores de casa.
-      </p>
-      <p class:list={["font-light", "text-lg", "mx-auto", "mt-4"]}>
-        Cada platillo que preparamos lleva el amor y la dedicación de toda mi
-        familia. Gracias a mi esposo, hijos y hermanos por hacer de este
-        proyecto una realidad. ¡Los esperamos para disfrutar juntos de un
-        verdadero festín casero!
-      </p>
-      <!-- <p class:list={["font-light", "text-lg", "mx-auto", "mt-4"]}>
-        We hope you enjoy this culinary journey with us, and may each flavor
-        transport you to moments of joy and connection. Welcome to La Chinacata,
-        where every dish tells a story, and every customer becomes a part of our
-        family!
-      </p> -->
-    </header>
-  </article>
-  <!-- <article class:list={["section", "grid grid-cols-1 lg:grid-cols-2", "gap-9"]}>
-    <div class:list={["place-self-center"]}>
+      <header
+        class:list={[
+          "grid grid-cols-1",
+          "[&_p]:font-extralight [&_p]:text-lg [&_p]:text-pretty [&_p]:text-green-leaf-900",
+          "space-y-5",
+        ]}
+      >
+        <Image
+          src={garland}
+          alt="Flowers garland"
+          class:list={["object-contain", "place-self-center", "h-16 md:h-24"]}
+        />
+        <p>
+          Mi nombre es Rocío Reyna, pero todos me conocen como La Chinacata. Un
+          apodo que mi papá, Jorge Reyna, me puso desde pequeña y que hoy
+          representa mi gran pasión: la cocina.
+        </p>
+        <p>
+          Crecí entre ollas y sartenes, aprendiendo los secretos de la cocina de
+          mi familia. Hoy, La Chinacata es el resultado de esa herencia
+          culinaria y el sueño de compartir con todos ustedes los sabores de
+          casa.
+        </p>
+        <p>
+          Cada platillo que preparamos lleva el amor y la dedicación de toda mi
+          familia. Gracias a mi esposo, hijos y hermanos por hacer de este
+          proyecto una realidad. ¡Los esperamos para disfrutar juntos de un
+          verdadero festín casero!
+        </p>
+      </header>
+    </article>
+    <article class:list={["grid grid-cols-1", "gap-2"]}>
       <Image
         src={cofounder}
-        alt="La Chinacata founder"
+        alt="La Chinacata cofounder"
         class:list={[
-          "object-cover object-center on",
           "border-l-2 border-t-4 border-green-leaf-800",
+          "object-cover object-center place-self-center",
           "rounded-tl-full rounded-bl-full rounded-tr-full rounded-br-full",
-          "w-full",
+          "w-5/6 h-auto",
         ]}
       />
-    </div>
-    <header
-      class:list={[
-        "flex flex-col items-center",
-        "space-y-6",
-        "text-center",
-        "[&_p]:text-green-leaf-800",
-      ]}
-    >
-      <Image
-        src={garland}
-        alt="Flowers garland"
-        class:list={["object-contain", "place-self-center", "h-16 md:h-24"]}
-      />
-      <p class:list={["font-light", "text-lg", "mx-auto", "mt-4"]}>
-        We are delighted to extend the warmest of welcomes to our gastronomic
-        corner, where homemade flavors and handcrafted dishes are the hallmark
-        of our Reyna family.
-      </p>
-      <p class:list={["font-light", "text-lg", "mx-auto", "mt-4"]}>
-        At La Chinacata, each dish is infused with the love and passion that
-        only a family-owned business can offer. From our traditional recipes to
-        our innovative creations, every bite is an experience that celebrates
-        the authenticity and care with which we craft each detail.
-      </p>
-      <p class:list={["font-light", "text-lg", "mx-auto", "mt-4"]}>
-        We take pride in sharing not only our food but also our history and
-        values with you. We are more than just a catering business; we are a
-        family dedicated to providing you with unforgettable moments through the
-        magic of homemade cooking.
-      </p>
-      <p class:list={["font-light", "text-lg", "mx-auto", "mt-4"]}>
-        We hope you enjoy this culinary journey with us, and may each flavor
-        transport you to moments of joy and connection. Welcome to La Chinacata,
-        where every dish tells a story, and every customer becomes a part of our
-        family!
-      </p>
-    </header>
-  </article> -->
+      <header
+        class:list={[
+          "grid grid-cols-1",
+          "[&_p]:font-extralight [&_p]:text-lg [&_p]:text-pretty [&_p]:text-green-leaf-900",
+          "space-y-5",
+        ]}
+      >
+        <Image
+          src={garland}
+          alt="Flowers garland"
+          class:list={["object-contain", "place-self-center", "h-16 md:h-24"]}
+        />
+        <p>
+          We are delighted to extend the warmest of welcomes to our gastronomic
+          corner, where homemade flavors and handcrafted dishes are the hallmark
+          of our Reyna family.
+        </p>
+        <p>
+          At La Chinacata, each dish is infused with the love and passion that
+          only a family-owned business can offer. From our traditional recipes
+          to our innovative creations, every bite is an experience that
+          celebrates the authenticity and care with which we craft each detail.
+        </p>
+        <p>
+          We take pride in sharing not only our food but also our history and
+          values with you. We are more than just a catering business; we are a
+          family dedicated to providing you with unforgettable moments through
+          the magic of homemade cooking.
+        </p>
+      </header>
+    </article>
+  </div>
 </section>
