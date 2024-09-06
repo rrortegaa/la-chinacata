@@ -7,7 +7,8 @@ module.exports = {
 		extend: {
       backgroundImage: {
         'home-hero': 'url("/src/assets/home/appetizers.jpeg")',
-        'about-hero': 'url("/src/assets/about/chinacata-staff.jpeg")',
+        // 'about-hero': 'url("/src/assets/about/chinacata-staff.jpeg")',
+        'about-hero': 'url("/src/assets/about/la-chinacata.png")',
         'gallery-hero': 'url("/src/assets/gallery/corporate-buffet.jpeg")',
         'contact-hero': 'url("/src/assets/gallery/food-truck.jpeg")',
       },
