@@ -7,7 +7,6 @@ module.exports = {
 		extend: {
       backgroundImage: {
         'home-hero': 'url("/src/assets/home/appetizers.jpeg")',
-        // 'about-hero': 'url("/src/assets/about/chinacata-staff.jpeg")',
         'about-hero': 'url("/src/assets/about/la-chinacata.png")',
         'gallery-hero': 'url("/src/assets/gallery/corporate-buffet.jpeg")',
         'contact-hero': 'url("/src/assets/gallery/food-truck.jpeg")',
@@ -43,8 +42,8 @@ module.exports = {
         'green-leaf-500': '#90F500',
         'green-leaf-600': '#6EC500',
         'green-leaf-700': '#529500',
-        'green-leaf-800': '#417100', // green primary
-        'green-leaf-900': '#386106',
+        'green-leaf-800': '#417100',
+        'green-leaf-900': '#386106', // green primary
         'green-leaf-950': '#1B3700',
         'lavender-blush': '#FEF2F5',
         'shark-50': '#F6F6F6',
@@ -80,7 +79,7 @@ module.exports = {
           letterSpacing: '-0.005em',
           fontWeight: '500'
         }],
-        'heading-sm': ['2.75rem', {
+        'heading-sm': ['3rem', {
           lineHeight: '1.07',
           letterSpacing: '-0.01em',
           fontWeight: '500'

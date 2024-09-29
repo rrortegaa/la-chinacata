@@ -4,97 +4,129 @@ import wedding from "../../assets/home/events/wedding.jpeg";
 import social from "../../assets/home/events/social-event.jpeg";
 import corporate from "../../assets/home/events/corporate-brunch.jpeg";
 
+const header = {
+  title: "Celebrating",
+  secondTitle: "life's moments",
+  subtitle:
+    "In our catering service we blend the warmth of homemade flavors with the elegance of custom-designed menus to create unforgettable culinary experiences.",
+};
 const events = [
   {
     name: "Weddings",
     detail:
-      "At La Chinacata, we understand that your wedding day is one of the most significant moments in your life, and we are dedicated to making it truly special.",
-    moreDetails: "",
+      "Transform your dream wedding into a reality with our exquisite catering services. From intimate ceremonies to grand receptions, we are devoted to creating a culinary experience that reflects your unique love story.",
+    moreDetails:
+      "Our talented team is dedicated to crafting delicious menus and providing impeccable service that will enchant your guests and leave them with memories to cherish for a lifetime. Trust us to cater to your every need on this special day.",
     image: wedding,
     alt: "Mexican wedding buffet served in cazuelas de barro.",
   },
   {
     name: "Social",
     detail:
-      "From birthdays to anniversaries, our social events are synonymous with joy and great taste. Our extensive experience allows us to adapt to any type of celebration, offering varied and delicious menus that will satisfy all palates.",
-    moreDetails: "",
+      "Discover unforgettable moments and create lasting memories with our exceptional catering services for social events. From elegant Anniversary Dinner to lively birthday celebrations, our team is dedicated to delivering delicious food and exceptional service that will leave your guests raving.",
+    moreDetails:
+      "Let us take care of the details so you can relax and enjoy every moment of your special event.",
     image: social,
     alt: "Fresh fruit table for quinceanera party.",
   },
   {
     name: "Corporate",
     detail:
-      "Looking for a caterer to make your corporate events memorable? Our home-cooked cuisine will allow you to create a relaxed and productive environment where your employees and clients will feel valued and cared for. From coffee breaks to formal dinners, we offer customized culinary solutions for every occasion.",
-    moreDetails: "",
+      "Elevate your corporate events with our top-notch catering services. Wheter you're planning a productive business meeting, a company milestone celebration, or a networking event, our team is committed to providing mouth-watering cuisine and professional service that will impress your clients and colleagues.",
+    moreDetails:
+      "Let us handle the catering so you can focus on achieving your business objectives in style.",
     image: corporate,
     alt: "Corporate brunch service with personalized menu.",
   },
 ];
 ---
 
-<section id="events" class:list={["section", "md:hidden", "py-16"]}>
-  <h2
+<!-- mobile -->
+<section id="events" class:list={["section", "xl:hidden", "py-16"]}>
+  <header
     class:list={[
-      "pb-10",
-      "font-serif text-heading-sm text-center text-french-rose-400",
+      "flex flex-col items-center",
+      "mx-auto",
+      "text-center",
+      "w-11/12 sm:w-10/12",
     ]}
   >
-    Celebrating<br />life's moments
-  </h2>
-  <h3 class:list={["font-extralight text-lg text-center text-green-leaf-900"]}>
-    In our catering service we blend the warmth of homemade flavors with the
-    elegance of custom-designed menus to create unforgettable culinary
-    experiences.
-  </h3>
-  {
-    events.map((event) => (
-      <article
-        class:list={[
-          "flex flex-col items-center",
-          "gap-6",
-          "pt-10",
-          "last-of-type:pt-10",
-        ]}
-      >
-        <Image
-          src={event.image}
-          alt={event.alt}
+    <h2
+      class:list={[
+        "pb-8",
+        "font-serif text-heading-sm md:text-heading-lg text-french-rose-400",
+      ]}
+    >
+      {header.title}<br />{header.secondTitle}
+    </h2>
+    <h3 class:list={["font-extralight text-lg text-green-leaf-900"]}>
+      {header.subtitle}
+    </h3>
+  </header>
+  <article
+    class:list={[
+      "flex flex-col mx-auto",
+      "sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-2.5",
+    ]}
+  >
+    {
+      events.map((event) => (
+        <article
           class:list={[
-            "border-green-leaf-900 border-y-2 border-l-4 border-r-2",
-            "object-cover place-self-center",
-            "rounded-full",
-            "w-11/12",
-          ]}
-        />
-
-        <div
-          class:list={[
-            "space-y-4",
-            "text-center text-pretty text-green-leaf-900",
-            "[&_p]:font-extralight [&_p]:text-base",
+            "flex flex-col gap-4",
+            "pt-8 last-of-type:pt-8",
+            "sm:last:col-span-2",
+            "sm:last:justify-self-center",
+            "sm:last:col-start-1 sm:last:col-end-3 lg:last:col-start-3",
+            "sm:last:w-[calc(50%-(3.5rem/2))] lg:last:w-full",
           ]}
         >
-          <span class:list={["cursor-pointer", "mt-8", "font-bold text-lg"]}>
-            {event.name}
-          </span>
-          <p>{event.detail}</p>
-          <p>{event.moreDetails}</p>
-        </div>
-      </article>
-    ))
-  }
+          <Image
+            src={event.image}
+            alt={event.alt}
+            class:list={[
+              "border-green-leaf-900 border-y-2 border-l-4 border-r-2",
+              "object-cover place-self-center",
+              "rounded-full",
+              "w-3/4 sm:w-2/3",
+            ]}
+          />
+
+          <div
+            class:list={[
+              "sm:px-5",
+              "space-y-4",
+              "text-center text-pretty text-green-leaf-900",
+              "[&_p]:font-extralight [&_p]:text-base",
+            ]}
+          >
+            <span
+              class:list={[
+                "mt-8",
+                "font-serif font-bold text-[28px] text-french-rose-400",
+              ]}
+            >
+              {event.name}
+            </span>
+            <p>{event.detail}</p>
+            <p>{event.moreDetails}</p>
+          </div>
+        </article>
+      ))
+    }
+  </article>
 </section>
 
 <!-- desktop -->
-<section class:list={["section"]}>
-  <article class:list={["hidden", "md:grid md:grid-cols-2", "gap-4"]}>
+<section class:list={["section", "hidden xl:block"]}>
+  <article class:list={["grid grid-cols-2", "gap-2"]}>
     {
       events.map((event, index) => (
         <Image
           src={event.image}
           alt={event.alt}
           class:list={[
-            "border-green-leaf-800 border-y-2 border-l-4 border-r-2",
+            "border-green-leaf-900 border-y-2 border-l-4 border-r-2",
             "object-cover place-self-center",
             "rounded-full",
             "w-11/12",
@@ -107,37 +139,35 @@ const events = [
 
     <div
       class:list={[
-        "[&_p]:text-center text-pretty [&_p]:text-green-leaf-900",
         "[&_p]:font-extralight [&_p]:text-lg",
+        "[&_p]:text-center text-pretty [&_p]:text-green-leaf-900",
       ]}
     >
       <h2
         class:list={[
-          "md:pb-7 lg:py-10",
-          "font-serif md:text-heading-md lg:text-heading-lg text-french-rose-400",
+          "pt-5 pb-8",
+          "font-serif text-heading-lg text-french-rose-400",
         ]}
       >
-        Celebrating<br />&nbsp;life's moments
+        {header.title}<br />&nbsp;{header.secondTitle}
       </h2>
       <h3
         class:list={[
           "mx-auto",
-          "pb-10",
+          "pb-7",
           "font-sans font-extralight text-xl text-center text-green-leaf-900",
           "w-11/12",
         ]}
       >
-        In our catering service we blend the warmth of homemade flavors with the
-        elegance of custom-designed menus to create unforgettable culinary
-        experiences.
+        {header.subtitle}
       </h3>
       <div
         id="events"
         class:list={[
-          "flex justify-around items-center",
+          "flex justify-around",
           "mx-auto",
-          "[&_span]:text-xl [&_span]:text-green-leaf-900",
-          "w-11/12",
+          "[&_span]:font-serif [&_span]:text-green-leaf-900",
+          "w-3/4",
         ]}
       >
         {
@@ -147,7 +177,9 @@ const events = [
               class:list={[
                 "cursor-pointer",
                 "text-xl text-center hover:text-french-rose-400",
-                { "font-bold": index === 0 },
+                {
+                  underline: index === 0,
+                },
               ]}
             >
               {event.name}
@@ -184,9 +216,9 @@ const events = [
   const corporateElements = document.getElementsByClassName("corporate");
 
   wedding?.addEventListener("click", () => {
-    wedding.classList.add("font-bold");
-    social?.classList.remove("font-bold");
-    corporate?.classList.remove("font-bold");
+    wedding.classList.add("underline");
+    social?.classList.remove("underline");
+    corporate?.classList.remove("underline");
     for (const element of weddingElements) {
       element.classList.remove("hidden");
     }
@@ -199,9 +231,9 @@ const events = [
   });
 
   social?.addEventListener("click", () => {
-    wedding?.classList.remove("font-bold");
-    social.classList.add("font-bold");
-    corporate?.classList.remove("font-bold");
+    wedding?.classList.remove("underline");
+    social.classList.add("underline");
+    corporate?.classList.remove("underline");
     for (const element of weddingElements) {
       element.classList.add("hidden");
     }
@@ -214,9 +246,9 @@ const events = [
   });
 
   corporate?.addEventListener("click", () => {
-    wedding?.classList.remove("font-bold");
-    social?.classList.remove("font-bold");
-    corporate.classList.add("font-bold");
+    wedding?.classList.remove("underline");
+    social?.classList.remove("underline");
+    corporate.classList.add("underline");
 
     for (const element of weddingElements) {
       element.classList.add("hidden");
