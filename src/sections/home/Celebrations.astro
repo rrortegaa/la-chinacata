@@ -2,6 +2,10 @@
 import { Image } from "astro:assets";
 import seafood from "../../assets/home/seafood-appetizers.jpeg";
 
+const content = {
+  title: "",
+};
+
 const menus = [
   {
     name: "Mexican Cuisine",
@@ -46,23 +50,23 @@ const menus = [
 <section id="services" class:list={["section"]}>
   <header
     class:list={[
-      "flex flex-col gap-7",
+      "flex flex-col",
       "mx-auto",
       "max-w-2xl",
-      "pb-10",
+      "pb-4",
       "text-center",
-      "[&_p]:font-sans [&_p]:font-light [&_p]:text-lg [&_p]:text-green-leaf-900",
+      "[&_p]:font-sans [&_p]:font-extralight [&_p]:text-lg [&_p]:text-green-leaf-900",
     ]}
   >
     <h2
       class:list={[
-        "font-serif font-medium",
-        "text-heading-sm md:text-heading-lg text-french-rose-400",
+        "pb-8",
+        "font-serif text-heading-sm md:text-heading-lg text-french-rose-400",
       ]}
     >
       Homemade flavor for unforgettable celebrations
     </h2>
-    <p>
+    <p class="pb-4">
       We bring family tradition to your table with homemade recipes made with
       fresh, high-quality ingredients.
     </p>
@@ -70,8 +74,8 @@ const menus = [
   </header>
   <div
     class:list={[
-      "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-4",
-      "gap-8 lg:gap-2 xl:gap-2",
+      "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-[repeat(4,7)]",
+      "gap-8 lg:gap-2",
     ]}
   >
     {
@@ -87,9 +91,7 @@ const menus = [
         >
           <h3
             class:list={[
-              "cursor-pointer",
-              "font-serif font-semibold text-3xl xl:text-4xl text-center text-pretty text-green-leaf-900",
-              "hover:text-carnation-400 hover:transition-colors hover:duration-75 hover:ease-linear",
+              "font-serif text-3xl xl:text-4xl text-center text-pretty text-french-rose-400",
             ]}
           >
             {menu.name}
@@ -98,7 +100,7 @@ const menus = [
             class:list={[
               "max-w-80",
               "pt-3",
-              "font-sans font-light text-base xl:text-lg text-center text-pretty text-green-leaf-900",
+              "font-sans font-extralight text-base xl:text-lg text-center text-pretty text-green-leaf-900",
             ]}
           >
             {menu.detail}
@@ -110,10 +112,10 @@ const menus = [
       src={seafood}
       alt="Seafood appetizer"
       class:list={[
-        "lg:row-start-2 lg:col-start-2 lg:row-end-4",
+        "lg:col-start-2 lg:row-start-2 lg:row-end-4",
         "hidden lg:block",
         "border-green-leaf-900 border-t-4 border-b border-l-2 border-r-2",
-        "lg:min-h-[80%] xl:min-h-[90%]",
+        "lg:h-full",
         "object-cover rounded-full",
         "place-self-center",
       ]}
@@ -121,10 +123,11 @@ const menus = [
   </div>
   <div
     class:list={[
-      "flex flex-col gap-7",
-      "pt-10 lg:pt-5",
+      "flex flex-col gap-4",
+      "max-w-2xl mx-auto",
+      "pt-8 lg:pt-4",
       "text-center",
-      "[&_p]:font-sans [&_p]:font-light [&_p]:text-lg [&_p]:text-green-leaf-900",
+      "[&_p]:font-sans [&_p]:font-extralight [&_p]:text-lg [&_p]:text-green-leaf-900",
     ]}
   >
     <p>
