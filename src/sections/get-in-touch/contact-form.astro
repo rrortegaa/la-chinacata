@@ -8,12 +8,12 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
       class:list={[
         "flex flex-col",
         "space-y-5",
-        "font-sans font-light",
+        "font-sans font-extralight",
         "text-lg text-center text-pretty text-green-leaf-800",
       ]}
     >
       <h2
-        class="font-serif text-heading-sm md:text-heading-md lg:text-heading-lg text-center text-french-rose-400 pb-5"
+        class="font-serif text-heading-sm md:text-[62px] lg:text-heading-lg text-center text-french-rose-400 pb-5"
       >
         Let’s
         <br class="block sm:hidden" />
@@ -47,7 +47,7 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
         "*:py-2 *:px-4 *:w-full",
         "*:bg-green-leaf-500/10",
         "*:placeholder:text-green-leaf-800 *:text-green-leaf-800",
-        "*:rounded *:font-semibold",
+        "*:rounded *:font-medium",
       ]}
     >
       <input
@@ -61,7 +61,21 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
       <input type="text" name="name" placeholder="Name" required />
       <input type="email" name="email" placeholder="Email" required />
       <input type="tel" name="phone" placeholder="Phone" required />
-      <input type="text" name="event-type" placeholder="Event type" required />
+      <!-- <input type="text" name="event-type" placeholder="Event type" required /> -->
+      <select name="event-type" required>
+        <option value="wedding" selected>Wedding</option>
+        <option value="birthday">Birthday</option>
+        <option value="corporate">Corporate</option>
+      </select>
+      <select name="event-details" required>
+        <option value="mexican-buffet" selected>Mexican Buffet</option>
+        <option value="italian-buffet">Italian Buffet</option>
+        <option value="formal-dinner">Formal Dinner</option>
+        <option value="brunch">Brunch</option>
+        <option value="taco-bar">Taco Bar</option>
+        <option value="burgers-hotdogs">Burgers and hotdogs</option>
+        <option value="custom-menu">Custom menu</option>
+      </select>
       <input
         type="text"
         name="date"
@@ -79,7 +93,7 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
         class="w-full"
       />
       <textarea
-        name="event-details"
+        name="more-details"
         rows="5"
         placeholder="Tell us more about your event"
         required></textarea>
