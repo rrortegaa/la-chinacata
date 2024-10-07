@@ -1,0 +1,86 @@
+---
+import { Image } from "astro:assets";
+import garland from "../../assets/about/flowers.svg";
+import truck from "../../assets/gallery/food-truck.png";
+import foodtruck from "../../assets/gallery/foodtruck.png";
+import founders from "../../assets/gallery/chinacata-founders.png";
+---
+
+<section class="section-full py-20 bg-lavender-blush">
+  <article
+    class:list={["section", "grid grid-cols-1 lg:grid-cols-2", "gap-10"]}
+  >
+    <div class:list={["min-h-80 sm:min-h-[576px] lg:min-h-0", "relative"]}>
+      <Image
+        src={foodtruck}
+        alt=""
+        class:list={[
+          "absolute top-0 right-0",
+          "border-8 border-b-[20px] border-white rounded-sm",
+          "object-cover object-right-bottom",
+          "h-1/2 w-1/2",
+        ]}
+      />
+      <Image
+        src={truck}
+        alt="La Chinacata food truck."
+        class:list={[
+          "absolute top-[20%] left-0",
+          "border-8 border-b-[20px] border-white rounded-sm",
+          "object-cover object-[center_bottom]",
+          "h-[58%] w-2/3",
+        ]}
+      />
+      <Image
+        src={founders}
+        alt="La Chinacata founders within the foodtruck."
+        class:list={[
+          "absolute bottom-0 right-[5%]",
+          "object-cover object-center",
+          "rounded-tl-full rounded-tr-full",
+          "h-3/5 w-2/5",
+        ]}
+      />
+    </div>
+    <header
+      class:list={[
+        "flex flex-col items-center",
+        "space-y-6",
+        "[&_p]:text-center [&_p]:text-pretty",
+        "[&_p]:font-extralight [&_p]:text-green-leaf-900",
+      ]}
+    >
+      <span
+        class="font-extralight text-sm text-center text-green-leaf-900 uppercase"
+        >Our start</span
+      >
+      <h2
+        class:list={[
+          "font-serif text-heading-sm md:text-heading-lg",
+          "text-center text-pretty text-french-rose-400",
+        ]}
+      >
+        Origins
+      </h2>
+      <Image
+        src={garland}
+        alt="Flowers garland"
+        class:list={["object-contain", "place-self-center", "h-16 md:h-24"]}
+      />
+      <p class:list={["text-lg", "mx-auto", "mt-4"]}>
+        La Chinacata nació de la pasión de nuestra fundadora, Rocío Reyna, quien
+        decidió llevar el sabor casero a las calles de California a través de
+        una encantadora food truck decorada como una típica casita mexicana en
+        vibrantes colores.
+      </p>
+
+      <p class:list={["text-lg", "mx-auto", "mt-4"]}>
+        Desde nuestros humildes comienzos, hemos deleitado a nuestros clientes
+        con platillos tradicionales que evocan recuerdos familiares y
+        celebraciones. La Chinacata ha crecido, pero nuestra misión sigue siendo
+        la misma: ofrecer el auténtico sabor de casa en cada evento, llevando
+        alegría y tradición a cada rincón.
+      </p>
+    </header>
+  </article>
+</section>
