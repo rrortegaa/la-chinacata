@@ -9,33 +9,32 @@ import garland from "../../assets/about/flowers.svg";
   <div
     class:list={[
       "section",
-      "grid grid-cols-1 md:grid-cols-2",
-      "gap-y-10",
-      "gap-x-9",
+      "grid grid-cols-1 md:grid-cols-2 items-start",
+      "gap-y-10 gap-x-9",
     ]}
   >
-    <article class:list={["grid grid-cols-1", "gap-2"]}>
+    <article class:list={["grid grid-cols-1", "gap-3"]}>
       <Image
         src={founder}
         alt="La Chinacata founder"
         class:list={[
-          "border-l-2 border-t-4 border-green-leaf-800",
-          "object-cover object-center place-self-center",
+          "border-l-2 border-t-4 border-green-leaf-900",
+          "object-cover object-center justify-self-center",
           "rounded-tl-full rounded-bl-full rounded-tr-full rounded-br-full",
-          "w-5/6 h-auto",
+          "w-3/4",
         ]}
       />
       <header
         class:list={[
           "grid grid-cols-1",
           "[&_p]:font-extralight [&_p]:text-lg [&_p]:text-center [&_p]:text-pretty [&_p]:text-green-leaf-900",
-          "space-y-5",
+          "space-y-4",
         ]}
       >
         <Image
           src={garland}
           alt="Flowers garland"
-          class:list={["object-contain", "place-self-center", "h-16 md:h-24"]}
+          class:list={["object-contain", "justify-self-center", "h-16 md:h-24"]}
         />
         <p>
           Mi nombre es Rocío Reyna, pero todos me conocen como La Chinacata. Un
@@ -56,41 +55,40 @@ import garland from "../../assets/about/flowers.svg";
         </p>
       </header>
     </article>
-    <article class:list={["grid grid-cols-1", "gap-2"]}>
+    <article class:list={["grid grid-cols-1", "gap-3"]}>
       <Image
         src={cofounder}
         alt="La Chinacata cofounder"
         class:list={[
-          "border-l-2 border-t-4 border-green-leaf-800",
-          "object-cover object-center place-self-center",
+          "border-l-2 border-t-4 border-green-leaf-900",
+          "object-cover object-center justify-self-center",
           "rounded-tl-full rounded-bl-full rounded-tr-full rounded-br-full",
-          "w-5/6 h-auto",
+          "w-3/4",
         ]}
       />
       <header
         class:list={[
           "grid grid-cols-1",
           "[&_p]:font-extralight [&_p]:text-lg [&_p]:text-center [&_p]:text-pretty [&_p]:text-green-leaf-900",
-          "space-y-5",
+          "space-y-4",
         ]}
       >
         <Image
           src={garland}
           alt="Flowers garland"
-          class:list={["object-contain", "place-self-center", "h-16 md:h-24"]}
+          class:list={["object-contain", "justify-self-center", "h-16 md:h-24"]}
         />
-        <p>Soy Yesenia Reyna y soy la segunda generación de La Chinacata.</p>
         <p>
-          Mi pasión es el servicio al cliente, brindar atención personalizada y
-          ayudarlos crear el evento de sus sueños creando montajes hermosos que
-          complementan la deliciosa comida de mi mamá.
+          Soy Yesenia Reyna, la orgullosa segunda generación de La Chinacata. Mi
+          pasión por el servicio al cliente y brindar una atención personalizada
+          me impulsa a ayudar a nuestros clientes a crear el evento de sus
+          sueños con hermosos montajes que complementan la deliciosa comida de
+          mi mamá.
         </p>
-        <!-- <p>
-          We take pride in sharing not only our food but also our history and
-          values with you. We are more than just a catering business; we are a
-          family dedicated to providing you with unforgettable moments through
-          the magic of homemade cooking.
-        </p> -->
+        <p>
+          Mi compromiso es brindarte un servicio excepcional, escuchar tus ideas
+          y convertirlas en realidad, para que tu evento sea inolvidable.
+        </p>
       </header>
     </article>
   </div>
