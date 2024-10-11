@@ -9,20 +9,9 @@ module.exports = {
         'home-hero': 'url("/src/assets/home/appetizers.jpeg")',
         'about-hero': 'url("/src/assets/about/la-chinacata.png")',
         'gallery-hero': 'url("/src/assets/gallery/corporate-buffet.jpeg")',
-        'contact-hero': 'url("/src/assets/gallery/food-truck.jpeg")',
+        'contact-hero': 'url("/src/assets/gallery/chinacata-cooking.jpeg")',
       },
       colors: {
-        // 'carnation-50': '#FFF1F2',
-        // 'carnation-100': '#FFE1E3',
-        // 'carnation-200': '#FFC7CB',
-        // 'carnation-300': '#FFA0A7',
-        // 'carnation-400': '#FF5865',
-        // 'carnation-500': '#F83B4A',
-        // 'carnation-600': '#E51D2D',
-        // 'carnation-700': '#C11421',
-        // 'carnation-800': '#A0141F',
-        // 'carnation-900': '#841820',
-        // 'carnation-950': '#48070C',
         // 'french-rose-50': '#FEF2F5',
         // 'french-rose-100': '#FEE5EB',
         // 'french-rose-200': '#FCCFDC',
@@ -67,32 +56,26 @@ module.exports = {
         'hero-sm': ['3.5rem', {
           lineHeight: '1.2',
           letterSpacing: '-0.005em',
-          // fontWeight: '500'
         }],
         'hero-md': ['4.5rem', {
           lineHeight: '1.2',
           letterSpacing: '-0.005em',
-          // fontWeight: '500'
         }],
         'hero-lg': ['6rem', {
           lineHeight: '1.2',
           letterSpacing: '-0.005em',
-          // fontWeight: '500'
         }],
         'heading-sm': ['3rem', {
           lineHeight: '1.07',
           letterSpacing: '-0.01em',
-          // fontWeight: '500'
         }],
         'heading-md': ['3.5rem', {
           lineHeight: '1.07',
           letterSpacing: '-0.01em',
-          // fontWeight: '500'
         }],
         'heading-lg': ['5rem', {
           lineHeight: '1.05',
           letterSpacing: '-0.01em',
-          // fontWeight: '500'
         }],
       }
     },
