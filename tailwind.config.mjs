@@ -12,7 +12,7 @@ module.exports = {
         'contact-hero': 'url("/src/assets/gallery/chinacata-cooking.jpeg")',
       },
       colors: {
-        // 'french-rose-50': '#FEF2F5',
+        'french-rose-50': '#FEF2F5',
         // 'french-rose-100': '#FEE5EB',
         // 'french-rose-200': '#FCCFDC',
         'french-rose-300': '#F9A8BF',
@@ -34,7 +34,6 @@ module.exports = {
         'green-leaf-800': '#417100',
         'green-leaf-900': '#386106', // green primary
         'green-leaf-950': '#1B3700',
-        'lavender-blush': '#FEF2F5',
         // 'shark-50': '#F6F6F6',
         // 'shark-100': '#E7E7E7',
         // 'shark-200': '#D1D1D1',
@@ -66,15 +65,11 @@ module.exports = {
           letterSpacing: '-0.005em',
         }],
         'heading-sm': ['3rem', {
-          lineHeight: '1.07',
-          letterSpacing: '-0.01em',
-        }],
-        'heading-md': ['3.5rem', {
-          lineHeight: '1.07',
+          lineHeight: '0.95',
           letterSpacing: '-0.01em',
         }],
         'heading-lg': ['5rem', {
-          lineHeight: '1.05',
+          lineHeight: '0.95',
           letterSpacing: '-0.01em',
         }],
       }
