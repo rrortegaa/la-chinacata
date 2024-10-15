@@ -1,19 +1,23 @@
 ---
+import { Image } from "astro:assets";
+import garland from "../../assets/about/flowers.svg";
+
 const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
 ---
 
 <section class="section">
-  <main class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-24">
+  <main class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
     <aside
       class:list={[
         "flex flex-col",
-        "space-y-5",
+        "space-y-4",
         "font-sans font-extralight",
-        "text-lg text-center text-pretty text-green-leaf-800",
+        "text-lg text-center text-pretty text-green-leaf-900",
       ]}
     >
+      <span class="font-light text-sm text-center uppercase">Contact</span>
       <h2
-        class="font-serif text-heading-sm md:text-[62px] lg:text-heading-lg text-center text-french-rose-400 pb-5"
+        class="font-serif text-heading-sm md:text-[62px] lg:text-heading-lg text-center text-french-rose-400"
       >
         Let’s
         <br class="block sm:hidden" />
@@ -22,7 +26,11 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
 
         dream event!
       </h2>
-
+      <Image
+        src={garland}
+        alt="Flowers garland"
+        class:list={["object-contain", "place-self-center", "h-16 md:h-24"]}
+      />
       <p>
         The secret to an unforgettable event starts with understanding your
         vision. Tell us all the details! What kind of party are you picturing?
@@ -98,7 +106,9 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
         placeholder="Tell us more about your event"
         required></textarea>
 
-      <button type="submit" class="!bg-green-leaf-800 !text-lime-50"
+      <button
+        type="submit"
+        class="!bg-green-leaf-800 !text-lime-50 hover:!bg-green-leaf-900"
         >Submit</button
       >
       <div
