@@ -5,13 +5,19 @@ import family from "../../assets/about/family.png";
 ---
 
 <section class="section-full pt-20">
-  <article class:list={["section", "grid grid-cols-1 lg:grid-cols-2", "gap-9"]}>
+  <article
+    class:list={[
+      "section",
+      "grid grid-cols-1 lg:grid-cols-2",
+      "gap-10 xl:gap-x-16",
+    ]}
+  >
     <header
       class:list={[
         "flex flex-col items-center",
-        "space-y-6",
-        "[&_p]:text-center [&_p]:text-pretty",
-        "[&_p]:font-extralight [&_p]:text-green-leaf-900",
+        "space-y-4",
+        "[&_p]:mx-auto [&_p]:mt-4",
+        "[&_p]:font-extralight [&_p]:text-lg [&_p]:text-center [&_p]:text-pretty [&_p]:text-green-leaf-900",
       ]}
     >
       <span class="font-light text-sm text-center text-green-leaf-900 uppercase"
@@ -24,31 +30,31 @@ import family from "../../assets/about/family.png";
           "text-center text-pretty text-french-rose-400",
         ]}
       >
-        Memorable <br />& custom <br />design catering
+        Our <br /> family story
       </h2>
       <Image
         src={garland}
         alt="Flowers garland"
         class:list={["object-contain", "place-self-center", "h-16 md:h-24"]}
       />
-      <p class:list={["text-lg", "mx-auto", "mt-4"]}>
+      <p>
         We are delighted to extend the warmest of welcomes to our gastronomic
         corner, where homemade flavors and handcrafted dishes are the hallmark
         of our Reyna family.
       </p>
-      <p class:list={["text-lg", "mx-auto", "mt-4"]}>
+      <p>
         At La Chinacata, each dish is infused with the love and passion that
         only a family-owned business can offer. From our traditional recipes to
         our innovative creations, every bite is an experience that celebrates
         the authenticity and care with which we craft each detail.
       </p>
-      <p class:list={["text-lg", "mx-auto", "mt-4"]}>
+      <p>
         We take pride in sharing not only our food but also our history and
         values with you. We are more than just a catering business; we are a
         family dedicated to providing you with unforgettable moments through the
         magic of homemade cooking.
       </p>
-      <p class:list={["text-lg", "mx-auto", "mt-4"]}>
+      <p>
         We hope you enjoy this culinary journey with us, and may each flavor
         transport you to moments of joy and connection. Welcome to La Chinacata,
         where every dish tells a story, and every customer becomes a part of our
@@ -60,10 +66,10 @@ import family from "../../assets/about/family.png";
         src={family}
         alt="La Chinacata family"
         class:list={[
-          "object-cover object-center",
-          "border-r-2 border-t-4 border-green-leaf-800",
+          "object-contain object-center",
+          "border-r-2 border-t-4 border-green-leaf-900",
           "rounded-tl-full rounded-bl-md rounded-tr-full rounded-br-md",
-          "w-full",
+          "max-h-[746px] lg:max-h-[834px] w-full",
         ]}
       />
     </div>

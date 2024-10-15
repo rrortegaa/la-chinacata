@@ -5,15 +5,40 @@ import cofounder from "../../assets/about/cofounder-s.png";
 import garland from "../../assets/about/flowers.svg";
 ---
 
-<section class="section-full space-y-10">
+<section class="section-full space-y-8">
   <div
     class:list={[
       "section",
       "grid grid-cols-1 md:grid-cols-2 items-start",
-      "gap-y-10 gap-x-9",
+      "gap-y-8 md:gap-x-10 xl:gap-x-16",
     ]}
   >
-    <article class:list={["grid grid-cols-1", "gap-3"]}>
+    <header
+      class:list={[
+        "grid items-center",
+        "row-start-1 md:col-span-2",
+        "space-y-5",
+        "[&_p]:font-extralight [&_p]:text-center [&_p]:text-pretty [&_p]:text-green-leaf-900",
+      ]}
+    >
+      <span class="font-light text-sm text-center text-green-leaf-900 uppercase"
+        >Team</span
+      >
+      <h2
+        class:list={[
+          "font-serif text-heading-sm md:text-heading-lg",
+          "text-center text-pretty text-french-rose-400",
+        ]}
+      >
+        Meet the Founders
+      </h2>
+      <Image
+        src={garland}
+        alt="Flowers garland"
+        class:list={["object-contain", "place-self-center", "h-16 md:h-24"]}
+      />
+    </header>
+    <article class:list={["grid grid-cols-1", "gap-y-6"]}>
       <Image
         src={founder}
         alt="La Chinacata founder"
@@ -21,7 +46,7 @@ import garland from "../../assets/about/flowers.svg";
           "border-l-2 border-t-4 border-green-leaf-900",
           "object-cover object-center justify-self-center",
           "rounded-tl-full rounded-bl-full rounded-tr-full rounded-br-full",
-          "w-3/4",
+          "w-4/6",
         ]}
       />
       <header
@@ -31,31 +56,25 @@ import garland from "../../assets/about/flowers.svg";
           "space-y-4",
         ]}
       >
-        <Image
-          src={garland}
-          alt="Flowers garland"
-          class:list={["object-contain", "justify-self-center", "h-16 md:h-24"]}
-        />
         <p>
-          Mi nombre es Rocío Reyna, pero todos me conocen como La Chinacata. Un
-          apodo que mi papá, Jorge Reyna, me puso desde pequeña y que hoy
-          representa mi gran pasión: la cocina.
+          My name is Rocío Reyna, but everyone knows me as La Chinacata. It’s a
+          nickname my dad, Jorge Reyna, gave me when I was little, and today it
+          represents my great passion: cooking.
         </p>
         <p>
-          Crecí entre ollas y sartenes, aprendiendo los secretos de la cocina de
-          mi familia. Hoy, La Chinacata es el resultado de esa herencia
-          culinaria y el sueño de compartir con todos ustedes los sabores de
-          casa.
+          I grew up surrounded by pots and pans, learning the secrets of my
+          family's kitchen. Today, La Chinacata is the result of that culinary
+          heritage and the dream of sharing the flavors of home with all of you.
         </p>
         <p>
-          Cada platillo que preparamos lleva el amor y la dedicación de toda mi
-          familia. Gracias a mi esposo, hijos y hermanos por hacer de este
-          proyecto una realidad. ¡Los esperamos para disfrutar juntos de un
-          verdadero festín casero!
+          Every dish we prepare carries the love and dedication of my entire
+          family. Thanks to my husband, children, and siblings for making this
+          project a reality. We look forward to welcoming you to enjoy a true
+          homemade feast together!
         </p>
       </header>
     </article>
-    <article class:list={["grid grid-cols-1", "gap-3"]}>
+    <article class:list={["grid grid-cols-1", "gap-y-6"]}>
       <Image
         src={cofounder}
         alt="La Chinacata cofounder"
@@ -63,7 +82,7 @@ import garland from "../../assets/about/flowers.svg";
           "border-l-2 border-t-4 border-green-leaf-900",
           "object-cover object-center justify-self-center",
           "rounded-tl-full rounded-bl-full rounded-tr-full rounded-br-full",
-          "w-3/4",
+          "w-4/6",
         ]}
       />
       <header
@@ -73,21 +92,16 @@ import garland from "../../assets/about/flowers.svg";
           "space-y-4",
         ]}
       >
-        <Image
-          src={garland}
-          alt="Flowers garland"
-          class:list={["object-contain", "justify-self-center", "h-16 md:h-24"]}
-        />
         <p>
-          Soy Yesenia Reyna, la orgullosa segunda generación de La Chinacata. Mi
-          pasión por el servicio al cliente y brindar una atención personalizada
-          me impulsa a ayudar a nuestros clientes a crear el evento de sus
-          sueños con hermosos montajes que complementan la deliciosa comida de
-          mi mamá.
+          I am Yesenia Reyna, the proud second generation of La Chinacata. My
+          passion for customer service and providing personalized attention
+          drives me to help our clients create the event of their dreams with
+          beautiful setups that complement my mom's delicious food.
         </p>
         <p>
-          Mi compromiso es brindarte un servicio excepcional, escuchar tus ideas
-          y convertirlas en realidad, para que tu evento sea inolvidable.
+          My commitment is to provide you with exceptional service, listen to
+          your ideas, and make them a reality, so your event will be
+          unforgettable.
         </p>
       </header>
     </article>
