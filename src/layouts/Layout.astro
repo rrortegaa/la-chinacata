@@ -17,14 +17,26 @@ const { class: className, title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Authentic and traditional homemade catering, made with fresh ingredients and family recipes. Enjoy the culinary experience at your event in California."
-    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta
+      name="description"
+      content="La Chinacata offers exceptional catering services for weddings, corporate events, and parties in California. Customizable menus with fresh, homemade dishes."
+    />
+    <meta
+      name="keywords"
+      content="La Chinacata, catering, homemade, fresh ingredients, family recipes, weddings, corporate events, parties, California"
+    />
+    <meta property="og:title" content={title} />
+    <meta
+      property="og:description"
+      content="La Chinacata offers exceptional catering services for weddings, corporate events, and parties in California. Customizable menus with fresh, homemade dishes."
+    />
+    <meta property="og:image" content="/la-chinacata-logo.png" />
+    <meta property="og:url" content="https://www.chinacata-reyna.com/" />
+    <meta property="og:type" content="website" />
   </head>
   <body class:list="bg-neutral-50 text-[#666]">
     <Navbar />
