@@ -8,27 +8,21 @@ import ruby from "../../assets/home/clients/ruby.png";
 
 const reviews = [
   {
-    name: "Luis N.",
-    description:
-      "This family owned business has come a long way and they have never sacrificed quality even when times got tough. Food and service had always been the forefront, and they take a lot of pride in the food they make. If you haven't had their aguas frescas, they were always the best on a warm day.",
-    image: luis,
-  },
-  {
     name: "Karen Miranda",
     description:
       "Everything was delicious and so special! Thank you for sharing and doing such an amazing job at our baby shower 🥰🙏🏼😊",
     image: karen,
   },
   {
-    name: "Joyce Rothenberger",
+    name: "Lisa",
     description:
-      "(Posting from my mom's account) La chinacata catered my wedding last weekend away Gold Mountain Manor in Big Bear. It was the most wonderful experience and Yesenia and her team were so kind and helpful. Yessenia was also so helpful and communicative leading up to the event. So many of our guests made comments on how delicious the food was and everything was a huge it. Thank you so much!!!",
+      "La chinacata catered my wedding last weekend away Gold Mountain Manor in Big Bear. It was the most wonderful experience and Yesenia and her team were so kind and helpful. Yessenia was also so helpful and communicative leading up to the event. So many of our guests made comments on how delicious the food was and everything was a huge it. Thank you so much!!!",
     image: joyce,
   },
   {
     name: "Alma Angelica De Leon",
     description:
-      "Great experience! @lachinacata provides very attentive service starting from the quoting process and menu selection straight through the day of our event. They were very responsive to all my questions and understood that I was looking for a traditional Mexican spread with a slightly modern look. We got more than we expected really. Very pretty set up and very tasty food. I highly recommend them and will look forward to hiring them again! Thank you, Yesenia!",
+      "Great experience! La Chinacata provides very attentive service starting from the quoting process and menu selection straight through the day of our event. They were very responsive to all my questions and understood that I was looking for a traditional Mexican spread with a slightly modern look. We got more than we expected really. Very pretty set up and very tasty food. I highly recommend them and will look forward to hiring them again! Thank you, Yesenia!",
     image: alma,
   },
   {
@@ -36,6 +30,12 @@ const reviews = [
     description:
       "We booked La Chinacata's live omelette bar, mini pancake station, as well as several other add-ons such as yogurt parfaits and fruit platters for a bridal shower. The food was absolutely amazing! Everyone raved about the omelettes. The ingredients were fresh and the service was very well executed. Her set up was so clean, professional, and gorgeous! We went with the cart option and we highly recommend it. I would definitely book with La Chinacata again for a future event!",
     image: ruby,
+  },
+  {
+    name: "Luis N.",
+    description:
+      "This family owned business has come a long way and they have never sacrificed quality even when times got tough. Food and service had always been the forefront, and they take a lot of pride in the food they make. If you haven't had their aguas frescas, they were always the best on a warm day.",
+    image: luis,
   },
 ];
 ---
@@ -90,11 +90,7 @@ const reviews = [
               "text-pretty text-green-leaf-900",
             ]}
           >
-            <p>
-              {/* <span class="align-top font-serif font-black text-lg">"</span> */}
-              "{review.description}
-              <span class="align-top font-serif font-black text-lg">"</span>
-            </p>
+            <p class="text-[15px]">"{review.description}"</p>
             <p class="italic pt-4 text-french-rose-400">{review.name}</p>
           </div>
         </div>
