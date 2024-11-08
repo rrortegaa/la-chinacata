@@ -1,26 +1,41 @@
 ---
 import { Image } from "astro:assets";
-import luis from "../../assets/home/clients/luis-n.png";
-import karen from "../../assets/home/clients/karen-miranda.png";
+import luis from "../../assets/home/clients/luis.png";
+import karen from "../../assets/home/clients/karen.png";
+import joyce from "../../assets/home/clients/joyce.png";
+import alma from "../../assets/home/clients/alma.png";
+import ruby from "../../assets/home/clients/ruby.png";
 
 const reviews = [
   {
     name: "Luis N.",
-    review:
+    description:
       "This family owned business has come a long way and they have never sacrificed quality even when times got tough. Food and service had always been the forefront, and they take a lot of pride in the food they make. If you haven't had their aguas frescas, they were always the best on a warm day.",
     image: luis,
   },
   {
     name: "Karen Miranda",
-    review:
+    description:
       "Everything was delicious and so special! Thank you for sharing and doing such an amazing job at our baby shower 🥰🙏🏼😊",
     image: karen,
   },
   {
-    name: "Karen",
-    review:
-      "Everything was delicious and so special! Thank you for sharing and doing such an amazing job at our baby shower 🥰🙏🏼😊",
-    image: luis,
+    name: "Joyce Rothenberger",
+    description:
+      "(Posting from my mom's account) La chinacata catered my wedding last weekend away Gold Mountain Manor in Big Bear. It was the most wonderful experience and Yesenia and her team were so kind and helpful. Yessenia was also so helpful and communicative leading up to the event. So many of our guests made comments on how delicious the food was and everything was a huge it. Thank you so much!!!",
+    image: joyce,
+  },
+  {
+    name: "Alma Angelica De Leon",
+    description:
+      "Great experience! @lachinacata provides very attentive service starting from the quoting process and menu selection straight through the day of our event. They were very responsive to all my questions and understood that I was looking for a traditional Mexican spread with a slightly modern look. We got more than we expected really. Very pretty set up and very tasty food. I highly recommend them and will look forward to hiring them again! Thank you, Yesenia!",
+    image: alma,
+  },
+  {
+    name: "Ruby Romero",
+    description:
+      "We booked La Chinacata's live omelette bar, mini pancake station, as well as several other add-ons such as yogurt parfaits and fruit platters for a bridal shower. The food was absolutely amazing! Everyone raved about the omelettes. The ingredients were fresh and the service was very well executed. Her set up was so clean, professional, and gorgeous! We went with the cart option and we highly recommend it. I would definitely book with La Chinacata again for a future event!",
+    image: ruby,
   },
 ];
 ---
@@ -50,41 +65,39 @@ const reviews = [
   <div class:list={["mx-auto", "max-w-screen-sm", "pt-10"]}>
     {
       reviews.map((review, index) => (
-        <>
-          <div
-            id={review.name.toLocaleLowerCase()}
+        <div
+          class="review"
+          class:list={[
+            "flex flex-col sm:flex-row gap-6",
+            // { hidden: index !== 0 },
+          ]}
+        >
+          <Image
+            src={review.image}
+            alt={review.name}
             class:list={[
-              "flex flex-col sm:flex-row gap-6",
-              { hidden: index !== 0 },
+              "basis-1/3",
+              "rounded-3xl",
+              "mx-auto",
+              "object-contain h-60 lg:h-72",
+            ]}
+          />
+          <div
+            class:list={[
+              "flex flex-col basis-2/3",
+              "place-self-center",
+              "[&_p]:text-center",
+              "text-pretty text-green-leaf-900",
             ]}
           >
-            <Image
-              src={review.image}
-              alt={review.name}
-              class:list={[
-                "basis-1/3",
-                "rounded-3xl",
-                "mx-auto",
-                "object-contain h-60 lg:h-72",
-              ]}
-            />
-            <div
-              class:list={[
-                "flex flex-col basis-2/3",
-                "place-self-center",
-                "[&_p]:text-center",
-                "text-pretty text-green-leaf-900",
-              ]}
-            >
-              <p>
-                <span class="align-top font-serif font-black text-lg">"</span>
-                {review.review}
-                <span class="align-top font-serif font-black text-lg">"</span>
-              </p>
-              <p class="italic pt-4 text-french-rose-400">{review.name}</p>
-            </div>
+            <p>
+              {/* <span class="align-top font-serif font-black text-lg">"</span> */}
+              "{review.description}
+              <span class="align-top font-serif font-black text-lg">"</span>
+            </p>
+            <p class="italic pt-4 text-french-rose-400">{review.name}</p>
           </div>
-        </>
+        </div>
       ))
     }
     <div
@@ -100,15 +113,27 @@ const reviews = [
   </div>
 </section>
 <script>
-  const next = document.getElementById("next");
-  const review1 = document.getElementById("luis n.");
-  const review2 = document.getElementById("karen miranda");
+  const reviews = document.querySelectorAll(".review");
 
-  console.log("NEXT: ", next);
-  console.log("review 1: ", review1);
-  console.log("review 2: ", review2);
+  let currentIndex = 0;
+
+  function showReview(index: number) {
+    // console.log("Showing review: ", index);
+    reviews.forEach((review, i) => {
+      if (review) {
+        review.classList.toggle("hidden", i !== index);
+      }
+    });
+  }
+
+  showReview(currentIndex);
+
+  const next = document.getElementById("next");
+
   next?.addEventListener("click", () => {
-    review1?.classList.toggle("hidden");
-    review2?.classList.toggle("hidden");
+    // console.log("Reviews: ", reviews);
+    // console.log("Is clicked");
+    currentIndex = (currentIndex + 1) % reviews.length;
+    showReview(currentIndex);
   });
 </script>
