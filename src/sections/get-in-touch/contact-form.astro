@@ -51,11 +51,14 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
       id="contact-form"
       class:list={[
         "relative",
-        "space-y-4",
-        "*:py-2 *:px-4 *:w-full",
         "*:bg-green-leaf-500/10",
         "*:placeholder:text-green-leaf-800 *:text-green-leaf-800",
+        "*:py-2 *:px-4 *:w-full",
         "*:rounded *:font-medium",
+        "[&_label]:bg-transparent [&_label]:font-extralight",
+        "[&_input]:mb-3 [&_select]:mb-3",
+        "[&_select]:appearance-none",
+        // "[&_input:date]:appearance-none [&_input:date]:w-full",
       ]}
     >
       <input
@@ -66,16 +69,25 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
       <input type="hidden" name="access_key" value={FORM_SUBMISSION_KEY} />
       <input type="hidden" name="botcheck" />
 
-      <input type="text" name="name" placeholder="Name" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <input type="tel" name="phone" placeholder="Phone" required />
-      <!-- <input type="text" name="event-type" placeholder="Event type" required /> -->
+      <label for="name">Name</label>
+      <input type="text" name="name" placeholder="Olivia Smith" required />
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        placeholder="olivia.smith@email.com"
+        required
+      />
+      <label for="phone">Phone</label>
+      <input type="tel" name="phone" placeholder="+1 (213) 555-0123" required />
+      <label for="event-type">Event type</label>
       <select name="event-type" required>
         <option value="wedding" selected>Wedding</option>
         <option value="birthday">Birthday</option>
         <option value="graduation">Graduation</option>
         <option value="corporate">Corporate</option>
       </select>
+      <label for="event-details">Event details</label>
       <select name="event-details" required>
         <option value="mexican-buffet" selected>Mexican Buffet</option>
         <option value="italian-buffet">Italian Buffet</option>
@@ -85,31 +97,29 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
         <option value="burgers-hotdogs">Burgers and hotdogs</option>
         <option value="custom-menu">Custom menu</option>
       </select>
+      <label for="date">Event date</label>
+      <input class="appearance-none bg-['rgb(144 245 0 / 0.1)'] h-8 py-2 px-4 text-base text-green-leaf-800 w-full" type="date" name="date" placeholder="10 Mar 2025" required />
+      <label for="location">Location</label>
+      <input type="text" name="location" placeholder="101 Palm Lane, Riverside, CA 92501" required />
+      <label for="guest-count">Guest count</label>
       <input
-        type="text"
-        name="date"
-        required
-        placeholder="Event date"
-        onfocus="(this.type='date')"
-        onblur="(this.type='text')"
-      />
-      <input type="text" name="location" required placeholder="Location" />
-      <input
+        class="appearance-none w-full"
         type="number"
         name="guest-count"
+        placeholder="30"
+        min="1"
         required
-        placeholder="Guest count"
-        class="w-full"
       />
+      <label for="more-details">More details</label>
       <textarea
         name="more-details"
         rows="5"
         placeholder="Tell us more about your event"
-        required></textarea>
-
+        required
+      />
       <button
         type="submit"
-        class="!bg-green-leaf-800 !text-lime-50 hover:!bg-green-leaf-900"
+        class="!bg-green-leaf-800 mt-4 !text-lime-50 hover:!bg-green-leaf-900"
         >Submit</button
       >
       <div
@@ -156,7 +166,27 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
   </main>
 </section>
 
-<!-- <section class="section"></section> -->
+<style>
+  select {
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%204%205%27%3E%3Cpath%20fill%3D%27%23417100%27%20d%3D%27M2%205L0%203h4L2%205z%27/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 0.7rem auto;
+    padding-right: 2rem;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(30%) sepia(100%) saturate(500%) hue-rotate(60deg);
+  }
+
+  select:focus,
+  input[type="date"]:focus {
+    outline: none;
+    border-color: #417100;
+  }
+
+
+</style>
 
 <script>
   const service = "https://api.web3forms.com/submit";
