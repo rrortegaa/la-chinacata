@@ -9,7 +9,7 @@ module.exports = {
         'home-hero': 'url("/src/assets/home/hero/appetizers.jpeg")',
         'about-hero': 'url("/src/assets/about/la-chinacata.png")',
         'gallery-hero': 'url("/src/assets/gallery/corporate-buffet.jpeg")',
-        'contact-hero': 'url("/src/assets/gallery/chinacata-cooking.jpeg")',
+        'contact-hero': 'url("/src/assets/get-in-touch/contact-hero.jpeg")',
       },
       colors: {
         'french-rose-50': '#FEF2F5',
