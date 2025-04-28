@@ -64,7 +64,7 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
       <input
         type="hidden"
         name="subject"
-        value="Nuevo cliente [la chinacata]"
+        value="Catering inquiry [La Chinacata]"
       />
       <input type="hidden" name="access_key" value={FORM_SUBMISSION_KEY} />
       <input type="hidden" name="botcheck" />
@@ -98,9 +98,20 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
         <option value="custom-menu">Custom menu</option>
       </select>
       <label for="date">Event date</label>
-      <input class="appearance-none bg-['rgb(144 245 0 / 0.1)'] h-8 py-2 px-4 text-base text-green-leaf-800 w-full" type="date" name="date" placeholder="10 Mar 2025" required />
+      <input
+        class="appearance-none bg-['rgb(144 245 0 / 0.1)'] h-8 py-2 px-4 text-base text-green-leaf-800 w-full"
+        type="date"
+        name="date"
+        placeholder="10 Mar 2025"
+        required
+      />
       <label for="location">Location</label>
-      <input type="text" name="location" placeholder="101 Palm Lane, Riverside, CA 92501" required />
+      <input
+        type="text"
+        name="location"
+        placeholder="101 Palm Lane, Riverside, CA 92501"
+        required
+      />
       <label for="guest-count">Guest count</label>
       <input
         class="appearance-none w-full"
@@ -115,8 +126,7 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
         name="more-details"
         rows="5"
         placeholder="Tell us more about your event"
-        required
-      />
+        required></textarea>
       <button
         type="submit"
         class="!bg-green-leaf-800 mt-4 !text-lime-50 hover:!bg-green-leaf-900"
@@ -184,8 +194,6 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
     outline: none;
     border-color: #417100;
   }
-
-
 </style>
 
 <script>
