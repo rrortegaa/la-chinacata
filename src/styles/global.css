@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Kurale", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-french-rose-50: #fef2f5;
+  --color-french-rose-300: #f9a8bf;
+  --color-french-rose-400: #f35e8c;
+  --color-french-rose-500: #ec477e;
+  --color-french-rose-900: #83184b;
+  --color-french-rose-950: #490825;
+  --color-green-leaf-50: #f9ffe2;
+  --color-green-leaf-100: #f1ffc0;
+  --color-green-leaf-500: #90f500;
+  --color-green-leaf-800: #417100;
+  --color-green-leaf-900: #386106;
+  --color-green-leaf-950: #1b3700;
+  --color-shark-950: #262626;
+  --color-vista-white: #fffbfb;
+
+  --text-hero-sm: 3.5rem;
+  --text-hero-sm--line-height: 1.2;
+  --text-hero-sm--letter-spacing: -0.005em;
+  --text-hero-md: 4.5rem;
+  --text-hero-md--line-height: 1.2;
+  --text-hero-md--letter-spacing: -0.005em;
+  --text-hero-lg: 6rem;
+  --text-hero-lg--line-height: 1.2;
+  --text-hero-lg--letter-spacing: -0.005em;
+  --text-heading-sm: 3rem;
+  --text-heading-sm--line-height: 0.95;
+  --text-heading-sm--letter-spacing: -0.01em;
+  --text-heading-lg: 5rem;
+  --text-heading-lg--line-height: 0.95;
+  --text-heading-lg--letter-spacing: -0.01em;
+
+  --background-image-home-hero: url("/src/assets/home/hero/appetizers.jpeg");
+  --background-image-about-hero: url("/src/assets/about/la-chinacata.png");
+  --background-image-gallery-hero: url("/src/assets/gallery/corporate-buffet.jpeg");
+  --background-image-contact-hero: url("/src/assets/get-in-touch/contact-hero.jpeg");
+}
