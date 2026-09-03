@@ -58,7 +58,6 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
         "[&_label]:bg-transparent [&_label]:font-extralight",
         "[&_input]:mb-3 [&_select]:mb-3",
         "[&_select]:appearance-none",
-        // "[&_input:date]:appearance-none [&_input:date]:w-full",
       ]}
     >
       <input
@@ -245,7 +244,7 @@ const FORM_SUBMISSION_KEY = import.meta.env.FORM_ACCESS_KEY;
           alert("Something went wrong. Please try again.");
         }
       })
-      .catch((error) => {
+      .catch(() => {
         alert("Something went wrong. Please try again.");
       })
       .finally(() => {
